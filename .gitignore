@@ -1,0 +1,10 @@
+.svn
+.svn/**
+Thumbs.db
+ehthumbs.db
+archive
+archive/**
+archives
+archives/**
+pars.cfm
+.DS_Store
