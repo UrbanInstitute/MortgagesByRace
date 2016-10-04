@@ -1,0 +1,394 @@
+<!-- 
+///////////////////URBAN INSTITUTE///////////////////
+
+Based on research by Bing Bai and Taz George
+Design, graphics and development by Tim Meko
+and Daniel Wolfe
+
+Story by Leigh Franke
+Edited by Fiona Blackshaw
+
+////////////////////////////////////////////////////
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>A new view of the housing boom and bust</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@urbaninstitute">
+    <meta name="twitter:creator" content="@urbaninstitute">
+    <meta name="twitter:title" content="A new view of the housing boom and bust">
+    <meta name="twitter:description" content="Today, low interest rates and affordable prices should be ideal for potential homebuyers. But while country’s housing markets slowly recover, stricter credit access means many previously qualified borrowers are getting locked out. While the downturn hurt many households, white borrowers hold a growing share of new mortgages while Hispanics and African Americans have yet to recapture their losses.">
+    <meta name="twitter:image" content="http://apps.urban.org/features/mortgages-by-race/images/facebookShare.jpg">
+
+    <meta property="og:title" content="A new view of the housing boom and bust" />
+    <meta property="og:description" content="Today, low interest rates and affordable prices should be ideal for potential homebuyers. But while country’s housing markets slowly recover, stricter credit access means many previously qualified borrowers are getting locked out. While the downturn hurt many households, white borrowers hold a growing share of new mortgages while Hispanics and African Americans have yet to recapture their losses." />
+
+    <meta property="og:image" content="http://apps.urban.org/features/mortgages-by-race/images/facebookShare.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta property="og:url" content="http://urbn.is/MortgageByRace">
+
+
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script type="text/javascript" src="map.js"></script>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/mortgage2013.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="vendor/jquery-1.10.2.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="topNav">
+        <div class="container">
+            <div id="header">
+               
+                     
+                <div id="share">
+                    <div id="logo"><a href="http://www.urban.org"><img src="images/logo-01.png" alt="The Urban Institute" /></a>
+                </div>
+                    <div id="shareMaster">
+                        <div id="shareCircle" class="circle">
+                            <i class="fa fa-share"></i>
+                        </div>
+                    </div>
+                    <div id="socials">
+                        <a href="https://twitter.com/home?status=New%20@urbaninstitute%20interactive:%20Breaking%20down%20mortgages%20by%20race%20http://urbn.is/MortgageByRace%20%23HMDA" target="_blank">
+                            <div id="twitter" class="circle">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://urbn.is/MortgageByRace" target="_blank">
+                            <div id="facebook" class="circle">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                        </a>
+                        <a href="mailto:%20?Subject=New interactive feature by the Urban Institute&amp;Body=Hi! I thought you'd be interested in this new interactive feature from the Urban Institute: “A new view of the housing boom and bust” http://urbn.is/http://urbn.is/MortgageByRace" target="_blank">
+                            <div id="email" class="circle">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header -->
+
+
+    <div class="">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div id='layers'>
+                        <div id='hpi'>
+                            <img id="hpiChart" src="images/HPI-01.png" />
+                        </div>
+                    </div>
+                    
+                    <div id='legend'>
+                                <b>Mortgage originations</b>
+                                </br>
+                                <div class="dotcircle asian"><p>Asian</p></div>
+                                <div class="dotcircle black right"><p>Black</p></div></br>
+                                <div class="dotcircle hispanic"><p>Hispanic</p></div>
+                                <div class="dotcircle white right"><p>White</p></div></br>
+                                <div id="map-footer">One dot equals 20 mortages</div><div id="map-footer"><b>Source:</b> Urban Institute analysis of Home Mortgage Disclosure Act data</div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="intro-header">
+
+        <div class="container" id="mapContainer">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <div id='map'>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">A new view of the housing boom and bust</h2>
+                    <p class="quoteAttribution byline">By Bing Bai and Taz George</p>
+                    
+                    <p class="lead">Today’s tight credit environment has
+                        <a href="http://blog.metrotrends.org/2014/03/mortgages-gone/" target="_blank">constrained mortgage lending</a> and is
+                        <a href="http://blog.metrotrends.org/2014/03/housing-bust-disproportionately-hurt-minorities/" target="_blank">disproportionately affecting</a> African American and Hispanic households. As a result, these communities have found it harder to take advantage of the low home prices and interest rates that followed the housing market crash, missing an important opportunity to <a href="http://www.urban.org/publications/412802.html" target="_blank">build wealth</a> through homeownership.
+                    </p>
+                    <p>
+                        The volume of lending overall and to different racial and ethnic groups fluctuated greatly over the course of the boom and bust, according to records released under the Home Mortgage Disclosure Act. African American and Hispanic borrowers took out a greater share of mortgages as housing prices neared their peak, arguably the worst time to take out a loan. Then, as prices began to drop and buying a home became more affordable, tightened credit standards left many from these same communities unable to obtain or refinance a loan. From 2005 to 2012, the share of loans made to African American and Hispanic households dropped from 23 percent to just 12 percent.
+                    </p>
+                    <p>
+
+                        While this trend is consistent across the country, each city has a unique story behind its drop-off in lending.
+</p>
+                </div>
+                <div class="col-md-5">
+
+                    <img class="center-block mortgage-img" src="images/mortgages-by-race-02.png" alt="Breaking down mortgages by race" />
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <hr class="section-heading-spacer">
+                <div class="col-sm-6">
+                    <img class="center-block mortgage-img" src="images/californiaMinorityMorgages-01.png" alt="California Minority Mortgages" />
+                    <hr class="section-heading-spacer" style="width:400px">
+                    <img class="center-block mortgage-img" src="images/LA.gif" alt="Los Angeles" style="margin-top: 10px;" />
+                </div>
+                <div class="col-sm-6">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Resilient but uneven recoveries: San Francisco and Los Angeles</h2>
+                    <p>San Francisco and Los Angeles are extreme examples of the national trend—a strong recovery in home prices and mortgage-market activity that is limited to white and Asian homebuyers. While much of the country is experiencing relatively affordable home prices, the housing recovery has been so strong in some parts of California, including San Francisco, that home prices and rents have surpassed their peak levels.
+                    </p>
+                    <p>
+                        An oft-touted example of a resilient real estate market, San Francisco and San Jose have seen mortgage activity for African Americans and Hispanics stagnate. In 2005, African Americans and Hispanics took out more than 76,000 mortgages, nearly 28 percent of all mortgage originations; by 2012, that share had dropped to less than 8 percent, about 19,000 new mortgages.
+                    </p>
+                    <p>
+                        The Bay Area’s booming economy has accelerated San Francisco’s recovery, with the number of jobs in computer systems design and related services nearly doubling from 36,600 in 2003 to 72,500 in 2012, according to the Federal Reserve Bank of St. Louis. But a tilted job market combined with limited space, widening income inequality, and strict lending standards has left the recovery increasingly one-sided.
+                    </p>
+                    <p>
+                        In August, San Francisco was named one of the
+                        <a href="http://www.urban.org/publications/413206.html" target="_blank">least affordable</a>  metropolitan areas, along with Los Angeles, which has seen a similarly uneven housing market recovery. In 2005, Hispanic households accounted for 38 percent of Los Angeles’s new mortgages, but by 2012 that share had fallen to 19 percent. Meanwhile, the share of loans to white borrowers rose from 42 to 58 percent.
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <hr class="section-heading-spacer">
+                <div class="col-md-7">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">When cash replaces mortgages: Miami</h2>
+                    <p>After the housing bust, a tight credit box and even tighter household budgets meant few low-income families could take advantage of the cheap single-family homes left from short sales and foreclosures. The excess supply spurred investors to buy swaths of properties with cash in order to profit from rising home values and a stream of rental income, creating a nationwide surge in cash sales.
+                    </p>
+                    <p>
+                        At the end of 2012, cash sales made up 41 percent of all home sales, compared with just 21 percent in 2001, according to CoreLogic.
+                    </p>
+                    <p>
+                        Miami is a prime example of this phenomenon: its cash sales share reached 70 percent in 2011 and 2012. But unlike most other cities, Miami has long had an elevated share of wealthy <a href="http://www.realtor.org/sites/default/files/2014 Profile of International Home Buying Activity.pdf" target="_blank">foreign homebuyers</a> purchasing vacation or investment homes, especially condos, in cash.
+                        
+                    </p>
+                    <p>
+                        Amid these unique regional trends, the racial disparity in mortgage lending remains. Hispanic and African American borrowers constituted a combined 66 percent of mortgage originations in 2006 but only 41 percent in 2012. Though these borrowers saw significant gains in the number of loans between 2011 and 2012, the totals for both groups remain below 2001 levels.
+
+                    </p>
+                </div>
+                <div class="col-md-5 center-block">
+                    <img class="center-block mortgage-img" src="images/miamiCashSales-01.png" alt="miami cash sales" />
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!--end .content secion a-->
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <hr class="section-heading-spacer">
+                <div class="col-md-5">
+                    <img class="center-block mortgage-img" src="images/detroit.gif" alt="Detroit" />
+                </div>
+                <div class="col-md-7">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">A delayed recovery still hurts minorities most: Detroit</h2>
+                    <p>Detroit is the poster child for cities that have lacked a strong recovery like San Francisco's. The sharp drop in the number of mortgages reflects this ailing Rust Belt city's sweeping economic decline. According to the US Census Bureau, Detroit's population fell from 951,270 to 713,777 between 2000 and 2010 as the auto industry stumbled, jobs disappeared, and the city entered the largest municipal
+                        <a href="http://blog.metrotrends.org/2013/07/fiscal-stress-detroit/" target="_blank">bankruptcy</a> on record. Though the recession took a toll on the entire region, the housing bust still disproportionately hurt minority borrowers.
+                    </p>
+                    <p>
+                        Detroit’s downtown, which held a large share of mortgages made to African American borrowers during the boom, has remained virtually devoid of new mortgages since the bust. From 2006 to 2012, the number of mortgages in the metropolitan area fell 79 percent for African American borrowers as lending within city limits fell off the map. In comparison, the number of mortgages made to white borrowers dropped only 11 percent.
+                        <a href="http://www.washingtonpost.com/news/storyline/wp/2014/08/15/jpmorgan-is-betting-100-million-on-detroit-can-it-leverage-a-lot-more/" target="_blank">Recent investments</a> from the
+                        <a href="http://www.crainsdetroit.com/article/20140817/NEWS/140819862/investor-pool-plans-40m-pontiac-redevelopment" target="_blank">private sector</a> suggest a comeback could be under way, but the mortgage market in the inner city shows no sign of recovery yet.
+
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <hr class="section-heading-spacer">
+                <div class="col-sm-8">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">What happens next?</h2>
+                    <p>For a full mortgage market recovery, we need to
+                        <a href="http://www.urban.org/publications/412910.html" target="_blank">expand the credit box</a> again. A
+                        <a href="http://www.urban.org/publications/412934.html" target="_blank">number</a> of
+                        <a href="http://www.urban.org/publications/413053.html" target="_blank">reforms</a> can be undertaken to encourage lending to creditworthy borrowers who would have qualified before the housing boom. A return to 2005 and 2006 lending practices would be ill-fated, but the pendulum has unquestionably swung too far. Today’s tight standards have locked out many prospective borrowers from homeownership, disproportionately preventing African American and Hispanic families from building wealth and benefiting from the recovery.
+
+                    </p>
+                    <hr class="section-heading-spacer">
+                    
+                    <div id="credits">
+                        <h5>Notes</h5>
+                        <p>Except where otherwise specified, the map and accompanying figures and analysis are derived from 2001–12 Home Mortgage Disclosure Act (HMDA) loan-level data and include all owner-occupied mortgage originations in which the borrower’s race and ethnicity and census tract of residence were fully recorded. Our originated loan data exclude loans purchased by institutions and cover all property types including manufactured and multifamily housing. HMDA mandates the reporting of mortgage loan applications from most, but not all, entities that originate mortgage loans. See <a href="http://www.ffiec.gov/hmda/pdf/2013guide.pdf" target="_blank">page 3 of the latest HMDA reporting guidance </a>on which entities may be exempted. Nonmetropolitan areas are more likely to be incompletely covered in HMDA data. We exclude loans where race and ethnicity information is not provided (by the applicant in a mail, Internet, or telephone application) or not available (e.g., for multifamily properties). The numbers of loans with missing race or ethnicity information are reported in the <a href="https://drive.google.com/file/d/0B8Ayd1M8yKi4SVo4eG04ajFhUVk/view?usp=sharing" target="_blank">downloadable data.</a><br></p>
+                        </div>
+                </div>
+                <div class="col-sm-4 center-block">
+                    <div id="download-data" >
+                    <a href="https://drive.google.com/file/d/0B8Ayd1M8yKi4SVo4eG04ajFhUVk/view?usp=sharing" target="_blank"><button type="button" id="researchButton" class="btn btn-default" style="width:100%">Download the data used in this presentation</button></a>
+                        <a href="http://www.urban.org/center/hfpc/" target="_blank" ><button type="button" id="hfpcButton" class="btn btn-default" style="width:100%; margin-top:10px">More about the Housing Finance Policy Center</button></a>
+                    
+                    
+                    </div>
+                
+                    
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <p class="copyright">Copyright &copy; Urban Institute 2014. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="map2013.js"></script>
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-392952-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>
