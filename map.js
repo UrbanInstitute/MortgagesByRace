@@ -30,13 +30,13 @@ map.scrollWheelZoom.disable();
 
         var layers = [{
             name: '2001',
-            layer: init('urbaninstitute.2001Mortgages') //placeholder
+            layer: init('urbaninstitute.2001Mortgages') 
         }, {
             name: '2002',
-            layer: init('urbaninstitute.2002Mortgages')//placeholder
+            layer: init('urbaninstitute.2002Mortgages')
         }, {
             name: '2003',
-            layer: init('urbaninstitute.2003Mortgages ')
+            layer: init('urbaninstitute.2003Mortgages')
         }, {
             name: '2004',
             layer: init('urbaninstitute.vnimgqfr')
@@ -64,7 +64,17 @@ map.scrollWheelZoom.disable();
         }, {
             name: '2012',
             layer: init('urbaninstitute.2012MortgagesTM')
-        }];
+        }, {
+            name: '2013',
+            layer: init('urbaninstitute.emu3ow29')
+        }, {
+            name: '2014',
+            layer: init('urbaninstitute.35b9ms4i')
+        }, {
+            name: '2015',
+            layer: init('urbaninstitute.3p52rk0x')
+        }
+        ];
 
         var control = document.getElementById('layers');
 
@@ -135,5 +145,5 @@ map.scrollWheelZoom.disable();
         var streetLayer = L.mapbox.tileLayer('urbaninstitute.h5b1kc2b'); 
         streetLayer
         .setZIndex(100)
-        .addTo(map);
+        //.addTo(map);
 });
