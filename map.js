@@ -7,7 +7,7 @@ $(document).ready(function(){
         var map = L.mapbox.map('map', 'urbaninstitute.iji12b2j,', {
             fadeAnimation: true,
             maxZoom: 10,
-            minZoom: 4
+            minZoom: 5
         })
             .setView([38, -96.50], 5);
 
@@ -72,7 +72,7 @@ map.scrollWheelZoom.disable();
             layer: init('urbaninstitute.35b9ms4i')
         }, {
             name: '2015',
-            layer: init('urbaninstitute.3p52rk0x')
+            layer: init('urbaninstitute.9wx4cxb8')
         }
         ];
 
