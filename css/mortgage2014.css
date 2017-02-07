@@ -476,7 +476,7 @@ table {
 
 
 
-.jx-controller, .jx-control{
+/*.jx-controller, .jx-control{
     background-color: #353535 !important;
 }
 
@@ -486,7 +486,18 @@ border-color: transparent transparent transparent #353535 !important;
 
 .jx-arrow.jx-left{
     border-color: transparent #353535 transparent transparent !important;
-}
-div.jx-label{
+}*/
+/*div.jx-label{
     font-family: Lato;
+}*/
+
+
+/*#laTop{
+     max-width: 560px !important;   
 }
+#dtwTop{
+    max-width: 460px !important;
+}
+#minorityImg{
+    margin-left: 0px !important;
+}*/
