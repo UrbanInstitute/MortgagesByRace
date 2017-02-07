@@ -473,3 +473,20 @@ table {
         width: 50%;
     }
 }
+
+
+
+.jx-controller, .jx-control{
+    background-color: #353535 !important;
+}
+
+.jx-arrow.jx-right{
+border-color: transparent transparent transparent #353535 !important;
+}
+
+.jx-arrow.jx-left{
+    border-color: transparent #353535 transparent transparent !important;
+}
+div.jx-label{
+    font-family: Lato;
+}
