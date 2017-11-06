@@ -1,90 +1,64 @@
-<!-- 
-///////////////////URBAN INSTITUTE///////////////////
-
-Based on research by Bing Bai and Taz George
-Design, graphics and development by Tim Meko
-and Daniel Wolfe
-
-Story by Leigh Franke
-Edited by Fiona Blackshaw
-
-////////////////////////////////////////////////////
--->
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>A new view of the housing boom and bust</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@urbaninstitute">
-    <meta name="twitter:creator" content="@urbaninstitute">
-    <meta name="twitter:title" content="A new view of the housing boom and bust">
-    <meta name="twitter:description" content="Today, low interest rates and affordable prices should be ideal for potential homebuyers. But while country’s housing markets slowly recover, stricter credit access means many previously qualified borrowers are getting locked out. While the downturn hurt many households, white borrowers hold a growing share of new mortgages while Hispanics and African Americans have yet to recapture their losses.">
-    <meta name="twitter:image" content="http://apps.urban.org/features/mortgages-by-race/images/facebookShare.jpg">
-
-    <meta property="og:title" content="A new view of the housing boom and bust" />
-    <meta property="og:description" content="Today, low interest rates and affordable prices should be ideal for potential homebuyers. But while country’s housing markets slowly recover, stricter credit access means many previously qualified borrowers are getting locked out. While the downturn hurt many households, white borrowers hold a growing share of new mortgages while Hispanics and African Americans have yet to recapture their losses." />
-
-    <meta property="og:image" content="http://apps.urban.org/features/mortgages-by-race/images/facebookShare.jpg" />
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="400">
-    <meta property="og:image:height" content="400">
-    <meta property="og:url" content="http://urbn.is/MortgageByRace">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Our interactive tool shows 10 important characteristics of 3- to 5-year-olds. It displays the characteristics by whether the children are enrolled in early education, whether their families are low income, and whether their parents are immigrants.">
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+     <title>10 Characteristics of Preschool-Age Children</title>
+     
 
 
+<!--social metas-->  
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@urbaninstitute">
+<meta name="twitter:creator" content="@urbaninstitute">
+<meta name="twitter:title" content="10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action">
+<meta name="twitter:description" content="Our data tool shows 10 characteristics of preschool-age children by state and local area to inform child development and school readiness efforts. ">
+<meta name="twitter:image" content="http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg ">
+<meta property="og:title" content="10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action" />
+<meta property="og:description" content="Our data tool shows 10 characteristics of preschool-age children by state and local area to inform child development and school readiness efforts. " />
+<meta property="og:image" content="http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg " />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="http://urbn.is/kidsdata">
 
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet" />
 
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
-    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+<link href="http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/hmda-v4.css" />
+    <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      
+<!--for the header-->      
+<link rel="stylesheet" type="text/css" href="css/urban-header.css">
+      
+<!--project style sheet-->
+<link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script type="application/ld+json">
+{
+                "@context": "http://schema.org",
+                "@type": "NewsArticle",
+                "headline": "10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action",
+                "url": "http://apps.urban.org/features/characteristics-of-preschool-age-children",
+                "thumbnailUrl": "http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg ",
+                "dateCreated": "2017-09-07T04:00:00.000Z",
+                "articleSection": "Interactive Feature",
+                "creator": ["Cary Lou","Devlin Hanson","Gina Adams","Audrey Singer"],
+                "keywords": ["Children","Education and Training","Families","Immigrants and Immigration","Poverty, Vulnerability, and the Safety Net","Race and Ethnicity"]
+}
+</script>
 
-    <!-- Custom CSS -->
-    <link href="css/mortgage2014.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="vendor/jquery-1.10.2.min.js"></script>
-    
-    <link rel="stylesheet" href="css/custom-juxtapose.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  </head>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-
-<body>
-<!-- Google Tag Manager -->
+  <body class="ub-body">
+  
+  <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MKBD2W"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -94,323 +68,1480 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MKBD2W');</script>
 <!-- End Google Tag Manager -->
 
+              <div id="header-pinned" class="no-touch">
+              
 
+  
+       
+               <a target="_blank" href="http://www.urban.org" title="Home" rel="home" class="site-logo"></a>
+            <div class="title"><span class="feature-link"><a href="http://www.urban.org/features" class="title-linkback" alt="Urban Institute logo">Features</a> <span>: :</span> </span><a href="index.html" class="title-linkback">10 Characteristics of Preschool-Age Children</a>
+            </div>
+            <div class="share-icons">
+                <div class="shareThisP">
+                    <span onclick="toggle_visibility('shareBox');">
+                            <div class="shareThisB"></div>
+                        </span>
+                    <div class="shareThisW" id="shareBox">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="topNav">
-        <div class="container">
-            <div id="header">
-               
-                     
-                <div id="share">
-                    <div id="logo"><a href="http://www.urban.org"><img src="images/logo-01.png" alt="The Urban Institute" /></a>
-                </div>
-                    <div id="shareMaster">
-                        <div id="shareCircle" class="circle">
-                            <i class="fa fa-share"></i>
+                        <div class="addthis_toolbox addthis_default_style  "addthis:title="" addthis:url="">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//urbn.is/kidsdata" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
+
+                            <a href="http://twitter.com/intent/tweet?text=10%20important%20characteristics%20of%20preschool-age%20kids%20by%20state%20and%20local%20area%3A%20http%3A%2F%2Furbn.is%2Fkidsdata%20(via%20%40urbaninstitute)" target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
+
+                            <a href="mailto:%20?Subject=New data tool from the Urban Institute &amp;Body=Hi! I thought you'd be interested in this new resource from the Urban Institute: “10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action” http://urbn.is/kidsdata" target="_blank" class="addthis_button_email at300b" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a>
+                            <div class="atclear"></div>
                         </div>
-                    </div>
-                    <div id="socials">
-                        <a href="https://twitter.com/home?status=New%20@urbaninstitute%20interactive:%20Breaking%20down%20mortgages%20by%20race%20http://urbn.is/MortgageByRace%20%23HMDA" target="_blank">
-                            <div id="twitter" class="circle">
-                                <i class="fa fa-twitter"></i>
-                            </div>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://urbn.is/MortgageByRace" target="_blank">
-                            <div id="facebook" class="circle">
-                                <i class="fa fa-facebook"></i>
-                            </div>
-                        </a>
-                        <a href="mailto:%20?Subject=New interactive feature by the Urban Institute&amp;Body=Hi! I thought you'd be interested in this new interactive feature from the Urban Institute: “A new view of the housing boom and bust” http://urbn.is/http://urbn.is/MortgageByRace" target="_blank">
-                            <div id="email" class="circle">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Header -->
-
-
-    <div class="">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <div id='layers'>
-                        <div id='hpi'>
-                            <img id="hpiChart" src="images/HPI-03.png" />
-                        </div>
-                    </div>
-                    
-                    <div id='legend'>
-                                <b>Mortgage originations</b>
-                                </br>
-                                <div class="dotcircle asian"><p>Asian</p></div>
-                                <div class="dotcircle black right"><p>Black</p></div></br>
-                                <div class="dotcircle hispanic"><p>Hispanic</p></div>
-                                <div class="dotcircle white right"><p>White</p></div></br>
-                                <div id="map-footer">One dot equals 20 mortages</div><div id="map-footer"><b>Source:</b> Urban Institute analysis of Home Mortgage Disclosure Act data</div>
-                            </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="intro-header">
-
-        <div class="container" id="mapContainer">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <div id='map'>
-
-                            
-                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">A new view of the housing boom and bust</h2>
-                    <p class="quoteAttribution byline">By Bing Bai and Taz George</p>
-                     <p class="quoteAttribution byline"><em>This feature was originally published in September 2013 and has been updated annually when new Home Mortgage Disclosure Act data become available. The latest February 2017 update incorporates 2015 originations.</em></p>
-                    
-                    <p class="lead">Today’s tight credit environment
-                        <a href="http://www.urban.org/policy-centers/housing-finance-policy-center/projects/housing-credit-availability-index" target="_blank">constrained mortgage lending</a> and is
-                        <a href="http://www.urban.org/urban-wire/increasing-access-mortgages-minorities" target="_blank">disproportionately affecting</a> black and Hispanic households. As a result, these communities have found it harder to take advantage of the low home prices and interest rates that followed the housing market crash, missing an important opportunity to <a href="http://www.urban.org/publications/412802.html" target="_blank">build wealth</a> through homeownership.
-                    </p>
-                    <p>
-                     The volume of lending overall and to different racial and ethnic groups fluctuated during the boom and bust, according to records released under the Home Mortgage Disclosure Act. Black and Hispanic borrowers took out a greater share of mortgages as housing prices neared their peak, arguably the worst time to take out a loan. As prices dropped and buying a home became more affordable, tightened credit standards left many from these same communities unable to obtain or refinance a loan. From 2005 to 2015, the share of loans made to black and Hispanic households dropped from 23 percent to 16 percent.
-                    </p>
-                    <p>
-
-                        While this trend is consistent across the country, each city has a unique story behind its drop-off in lending.
-                    </p>
-                </div>
-                <div class="col-md-5">
-
-                    <img class="center-block mortgage-img" src="images/mortgages-by-race-02.png" alt="Breaking down mortgages by race" />
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <hr class="section-heading-spacer">
-                <div class="col-sm-6">
-                    <img class="center-block mortgage-img" id = "minorityImg" src="images/californiaMinorityMorgages-01.png" alt="California Minority Mortgages" />
-                    <hr class="section-heading-spacer" style="width:400px">
-                    <img class="center-block mortgage-img" id = "laTop" src = "images/LA_top.png" />
-                    <div class="juxtapose">
-                        <img data-label="2001" src="images/LA_2001.png" />
-                        <img data-label="2015" src="images/LA_2015.png" />
-                    </div>
-
-
-
-
-                </div>
-                <div class="col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Resilient but uneven recoveries: San Francisco and Los Angeles</h2>
-                    <p>San Francisco and Los Angeles are extreme examples of the national trend—a strong recovery in home prices and mortgage-market activity that is limited to white and Asian homebuyers. While much of the country is experiencing relatively affordable home prices, the housing recovery has been so strong in some parts of California, including San Francisco, that home prices and rents have surpassed their peak levels.
-                    </p>
-                    <p>
-                        An oft-touted example of a resilient real estate market, San Francisco has seen mortgage activity for black and Hispanic borrowers stagnate. In 2005, black and Hispanic borrowers took out more than 50,000 mortgages, nearly 28 percent of all mortgage originations. By 2015, that share had dropped to 13 percent, about 13,500 new mortgages.
-                    </p>
-                    <p>
-                        The Bay Area’s booming economy has accelerated San Francisco’s recovery, with the number of jobs in computer systems design and related services nearly doubling from 36,600 in 2003 to 72,500 in 2012, according to the Federal Reserve Bank of St. Louis. But a tilted job market combined with limited space, widening income inequality, and strict lending standards has left the recovery increasingly one-sided.
-                    </p>
-                    <p>
-                        San Francisco is one of the nation’s <a href="http://www.urban.org/policy-centers/housing-finance-policy-center/projects/housing-finance-glance-monthly-chartbooks" target="_blank">least affordable</a> metropolitan areas, along with Los Angeles, which has seen a similarly uneven housing market recovery. In 2005, Hispanic households accounted for 38 percent of Los Angeles’s new mortgages, but by 2015, that share had fallen to 29 percent. Meanwhile, the share of loans to white borrowers rose from 42 to 54 percent.
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <hr class="section-heading-spacer">
-                <div class="col-md-7">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">When cash replaces mortgages: Miami</h2>
-                    <p>After the housing bust, a tight credit box and even tighter household budgets meant few low-income families could take advantage of the cheap single-family homes left from short sales and foreclosures. The excess supply spurred investors to buy swaths of properties with cash to profit from rising home values and a stream of rental income, creating a nationwide surge in cash sales.
-                    </p>
-                    <p>
-                        Cash sales reached 46 percent of all home sales in 2011 and 2012 and stayed at 34 percent at the end of 2015, compared with just 24 percent in 2001, according to CoreLogic.
-                    </p>
-                    <p>
-                        Miami is a prime example of this phenomenon. Its cash sales share reached 70 percent in 2011 and 2012 and stood at 54 percent in 2015. But unlike most other cities, Miami has long had an elevated share of wealthy <a href="http://www.realtor.org/sites/default/files/2014 Profile of International Home Buying Activity.pdf" targ et="_blank">foreign homebuyers</a> purchasing vacation or investment homes, especially condos, in cash.
+  
+                  
+                   
+         </div>      
+ 
+                  
                         
-                    </p>
-                    <p>
-                        Amid these regional trends, the racial disparity in mortgage lending remains. Hispanic and black borrowers constituted a combined 58 percent of mortgage originations in 2005 but only 49 percent in 2015. Though these borrowers saw significant gains in the number of loans between 2011 and 2012, the totals for both groups remain below 2001 levels.
-                    </p>
-                </div>
-                <div class="col-md-5 center-block">
-                    <img class="center-block mortgage-img" src="images/miamiCashSales-01.png" alt="miami cash sales" />
-                </div>
+     
+          
 
-            </div>
+        
 
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!--end .content secion a-->
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <hr class="section-heading-spacer">
-                <div class="col-md-5">
-                    <img class="center-block mortgage-img" id = "dtwTop" src = "images/DTW_top.png" />
-                    <div class="juxtapose">
-                        <img data-label="2001" src="images/DTW_2001.png" />
-                        <img data-label="2015" src="images/DTW_2015.png" />
-                    </div>
-
-                </div>
-                <div class="col-md-7">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">A delayed recovery still hurts minorities most: Detroit</h2>
-                    <p>Detroit is the poster child for cities that have lacked a strong recovery like San Francisco's. The sharp drop in the number of mortgages reflects this ailing Rust Belt city's sweeping economic decline. According to the US Census Bureau, Detroit's population fell from 951,270 to 713,777 between 2000 and 2010 as the auto industry stumbled, jobs disappeared, and the city entered the largest municipal
-                        <a href="https://www.wsj.com/articles/SB10001424127887323993804578614144173709204" target="_blank">bankruptcy</a> on record. Though the recession took a toll on the entire region, the housing bust still disproportionately hurt minority borrowers.
-                    </p>
-                    <p>
-                        Detroit is the poster child for cities that have lacked a strong recovery. The sharp drop in the number of mortgages reflects this ailing Rust Belt city's sweeping economic decline. According to the US Census Bureau, Detroit's population fell from 951,270 to 713,777 between 2000 and 2010 as the auto industry stumbled, jobs disappeared, and the city entered the largest municipal bankruptcy on record. Though the recession took a toll on the entire region, the housing bust disproportionately hurt minority borrowers.
-                    </p>
-                    <p>
-                        Detroit’s downtown, which held a large share of mortgages made to black borrowers during the boom, has remained virtually devoid of new mortgages since the bust. From 2005 to 2015, the number of mortgages in the metropolitan area fell 82 percent for black borrowers as lending within city limits fell off the map. Even white borrowing has dropped off significantly, with the number of mortgages made to white borrowers decreasing 50 percent. Continued investments from the private sector suggest a comeback could be under way, but the mortgage market in the inner city shows no sign of recovery yet.
-
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <hr class="section-heading-spacer">
-                <div class="col-sm-8">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">What happens next?</h2>
-                    <p>For a full mortgage market recovery, we need to
-                        <a href="http://www.urban.org/publications/412910.html" target="_blank">expand the credit box</a> again. 
-                        <a href="http://www.urban.org/publications/412934.html" target="_blank">Several</a> <a href="http://www.urban.org/publications/413053.html" target="_blank">reforms</a> can encourage lending to creditworthy borrowers who would have qualified before the housing boom. A return to 2005 and 2006 lending practices would be ill fated, but the pendulum has swung too far. Today’s tight standards have locked out many prospective borrowers from homeownership, disproportionately preventing black and Hispanic families from building wealth and benefiting from the recovery.
-
-                    </p>
-                    <hr class="section-heading-spacer">
-                    
-                    <div id="credits">
-                        <h5>Notes</h5>
-                        <p>Except where otherwise specified, the map and accompanying figures and analysis are derived from 2001&ndash;15 Home Mortgage Disclosure Act (HMDA) loan-level data and include all owner-occupied mortgage originations in which the borrower’s race and ethnicity and census tract of residence were fully recorded. Our originated loan data exclude loans purchased by institutions and cover all property types including manufactured and multifamily housing. HMDA mandates the reporting of mortgage loan applications from most, but not all, entities that originate mortgage loans. See <a href="http://www.ffiec.gov/hmda/pdf/2013guide.pdf" target="_blank">page 3 of the latest HMDA reporting guidance </a>on which entities may be exempted. Nonmetropolitan areas are more likely to be incompletely covered in HMDA data. We exclude loans where race and ethnicity information is not provided (by the applicant in a mail, Internet, or telephone application) or not available (e.g., for multifamily properties). The numbers of loans with missing race or ethnicity information are reported in the <a href="HMDA_loan_originations_by_CBSA_2001_2015.xlsx"">downloadable data.</a><br></p>
-                        </div>
-                </div>
-                <div class="col-sm-4 center-block">
-                    <div id="download-data" >
-                    <a href="HMDA_loan_originations_by_CBSA_2001_2015.xlsx"><button type="button" id="researchButton" class="btn btn-default" style="width:320px">Download the data used in this presentation</button></a>
-                        <a href="http://www.urban.org/center/hfpc/" target="_blank" ><button type="button" id="hfpcButton" class="btn btn-default" style="width:320px; margin-top:10px">More about the Housing Finance Policy Center</button></a>
-                    
-                    
-                    </div>
+      
+          <div class="wrapper"> 
+            
+        
                 
-                    
-                </div>
-            </div>
+              
+                
+                <section class="container clearfix" >   
+        <div class="row">
+          <div class="full-col">
+          
+          <div id="ub-hmda-container">
+		<div id="ub-map-container">
+			<div class="ub-intro-wrap">
+				<div class="ub-intro">
+					<h1>An interactive view of the housing boom and bust</h1>
+					<p class="ub-authors">By Bing Bai, Bhargavi Ganesh, and Aaron Williams</p>
+					<p class="ub-intro-italic">This map was originally published in September 2013 and has been updated annually as new Home Mortgage Disclosure Act data become available. This 2017 update incorporates 2016 mortgage originations and includes information on purchase and refinance loans.</p>
+					<p class="ub-top">Since 2008, the tight credit environment has constrained mortgage lending and disproportionately affected black and Hispanic households. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to build wealth through homeownership. Credit remains tight today while home prices have reached their pre-crisis peak, further limiting affordable housing options for minority homebuyers.</p>
+				</div>
+			</div>
+			<div id="ub-loading-overlay">
+				<div class="ub-loading"><p><i class="fa fa-refresh fa-fw fa-spin"></i> Loading...</p></div>
+			</div>
+			<div id="ub-cities-wrap">
+				<div id="ub-cities">
+					<div class="ub-cities-icon"></div>
+				</div>
+			</div>
+			<div class="ub-legend-left">
+				<p>One dot equals 10 mortgages</p>
+			</div>
+			<div class="ub-legend-right">
+				<nav id="ub-menu">
+					<div class="ub-pointers">
+						<p class="ub-pointer-purchased">Purchased</p>
+						<p class="ub-pointer-refinanced">Refinanced</p>						
+					</div>
+					<ul>
+						<li>All</li>
+						<li>Asian</li>
+						<li>Hispanic</li>
+						<li>Black</li>
+						<li>White</li>
+					</ul>
+					<a href="#" class="ub-button active" data-id="" title="All purchased" id="ub-purchase-all-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="All refinanced" id="ub-refinance-all-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Asian purchased" id="ub-purchase-asian-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Asian refinanced" id="ub-refinance-asian-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Hispanic purchased" id="ub-purchase-hispanic-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Hispanic refinanced" id="ub-refinance-hispanic-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Black purchased" id="ub-purchase-black-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="Black refinanced" id="ub-refinance-black-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="White purchased" id="ub-purchase-white-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a href="#" class="ub-button active" data-id="" title="White refinanced" id="ub-refinance-white-link"><i class="fa fa-times" aria-hidden="true"></i><i class="fa fa-check" aria-hidden="true"></i></a>
+				</nav>
+			</div>
+			<div id="ub-map-container-wrap">
+				<div id="ub-map-year" class="slide showing">
+					<div class="ub-map-gradient"></div>
+				</div>
+				<div id="ub-map-year-blur" class="slide">
+					<div class="ub-map-gradient"></div>
+				</div>
+			</div>
+			<div id="ub-map-text">
+				<div class="ub-map-gradient"></div>
+			</div>
+			<div id="ub-map">
+				<div class="ub-map-gradient"></div>
+			</div>
+		</div>
+		<div id="ub-container">
+			<div class="ub-graphic-container">
+				<button class="ub-controls active" id="pause">&#10074;&#10074;</button>
+				<ul>
+					<li><a class="ub-year-active" id="ub-2001" title="Click to see the 2001 data">2001</a></li>
+					<li><a class="ub-year" id="ub-2002" title="Click to see the 2002 data">2002</a></li>
+					<li><a class="ub-year" id="ub-2003" title="Click to see the 2003 data">2003</a></li>
+					<li><a class="ub-year" id="ub-2004" title="Click to see the 2004 data">2004</a></li>
+					<li><a class="ub-year" id="ub-2005" title="Click to see the 2005 data">2005</a></li>
+					<li><a class="ub-year" id="ub-2006" title="Click to see the 2006 data">2006</a></li>
+					<li><a class="ub-year" id="ub-2007" title="Click to see the 2007 data">2007</a></li>
+					<li><a class="ub-year" id="ub-2008" title="Click to see the 2008 data">2008</a></li>
+					<li><a class="ub-year" id="ub-2009" title="Click to see the 2009 data">2009</a></li>
+					<li><a class="ub-year" id="ub-2010" title="Click to see the 2010 data">2010</a></li>
+					<li><a class="ub-year" id="ub-2011" title="Click to see the 2011 data">2011</a></li>
+					<li><a class="ub-year" id="ub-2012" title="Click to see the 2012 data">2012</a></li>
+					<li><a class="ub-year" id="ub-2013" title="Click to see the 2013 data">2013</a></li>
+					<li><a class="ub-year" id="ub-2014" title="Click to see the 2014 data">2014</a></li>
+					<li><a class="ub-year" id="ub-2015" title="Click to see the 2015 data">2015</a></li>
+					<li><a class="ub-year" id="ub-2016" title="Click to see the 2016 data">2016</a></li>
+				</ul>
+			</div>
+			<div class="ub-footer-text">
+				<p class="ub-authors">By Bing Bai, Bhargavi Ganesh, Taz George, and Aaron Williams</p>
+				<p class="ub-intro-italic">This map was originally published in September 2013 and has been updated annually as new Home Mortgage Disclosure Act data become available. This October 2017 update incorporates 2016 mortgage originations and includes information on purchase and refinance loans.</p>
+				<p class="ub-bottom">Since 2008, the tight credit environment has constrained mortgage lending and disproportionately affected black and Hispanic households. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to build wealth through homeownership. Credit remains tight today while home prices have risen to within 0.5 percent of their pre-crisis peak, further limiting affordable housing options for minority homebuyers.</p>
+			</div>
+			<div class="ub-graphic-footer">
+				<p><strong>Source:</strong> Urban Institute analysis of Home Mortgage Disclosure Data. Home Price Index is based on CoreLogic HPI.</p>
+				<p class="ub-urban"><span>Urban</span> Institute</p>
+			</div>
+		</div>
+    </div> <!-- Close of div#ub-hmda-container -->
+          
+          </div></div></section>
+                
+                 
+              
+               
 
-        </div>
-        <!-- /.container -->
 
-    </div>
-    <!-- /.content-section-a -->
+</div>
+    
+    <footer>
+    
+     <div class="content" style="padding-left:2%; padding-right:2%">     
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+               
+                
 
-                    <p class="copyright">Copyright &copy; Urban Institute 2014. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+                    <h4>Project credits</h4>
+                    <div class="urbanstatement">
+                      <p>The Housing Finance Policy Center (HFPC) was launched with generous support at the leadership level from the Citi Foundation and John D. and Catherine T. MacArthur Foundation. Additional support was provided by The Ford Foundation and The Open Society Foundation.</p>
+                      <p>Ongoing support for HFPC is also provided by the Housing Finance Innovation Forum, a group of organizations and individuals that support high-quality independent research that informs evidence-based policy development. Funds raised through the Forum provide flexible resources, allowing HFPC to anticipate and respond to emerging policy issues with timely analysis. This funding supports HFPC&rsquo;s research, outreach and engagement, and general operating activities.<br>
+                        This brief was funded by these combined sources. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission.</p>
+                      <p>The views expressed are those of the authors and should not be attributed<br>
+                        to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available here.</p>
+                    </div>
+
+                    <h3 class="job">Research</h3>
+                  <p>Bing Bai and Bhargavi Ganesh </p>
+<h3 class="job">Design and Development</h3>
+<p>5W Infographics, Ben Chartof, and Jerry Ta</p>
+<h3 class="job">Editorial</h3>
+                    <p>David Hinson</p>
+                    <h3 class="job">Writing</h3>
+                    <p>Sheryl Pardo</p>
+                    <div class="credits">Copyright &copy; November 2017. <a href="http://www.urban.org/" target = "_blank">Urban Institute</a>. <a href="https://github.com/UI-Research/preschool-data-tool" target="_blank">View this project on Github.</a></div>
+                
+         
+    </div> 
     </footer>
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-
-    <script type="text/javascript" src="map.js"></script>
-
-    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-
+    
+    <script type="text/javascript" src="js/jquery.2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/d3.v3.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		mapboxgl.accessToken = 'pk.eyJ1IjoidXJiYW5pbnN0aXR1dGUiLCJhIjoiTEJUbmNDcyJ9.mbuZTy4hI_PWXw3C3UFbDQ';
 
-  ga('create', 'UA-392952-14', 'auto');
-  ga('send', 'pageview');
+		var PurAsianOff = false;
+		var RefiAsianOff = false;
+		var PurHispanicOff = false;
+		var RefiHispanicOff = false;
+		var PurBlackOff = false;
+		var RefiBlackOff = false;
+		var PurWhiteOff = false;
+		var RefiWhiteOff = false;
+		
+		var allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+		
+		var toggleableLayerIds2001 = [ '2001purchaseasiannewgeojson', '2001refinanceasiannewgeojson', '2001purchasehisnewgeojson', '2001refinancehisnewgeojson', '2001purchaseaanewgeojson', '2001refinanceaanewgeojson', '2001purchasenhwnewgeojson', '2001refinancenhwnew15geojson' ];
+		var toggleableLayerIds2002 = [ '2002purchaseasiannewgeojson', '2002refinanceasiannewgeojson', '2002purchasehisnewgeojson', '2002refinancehisnewgeojson', '2002purchaseaanewgeojson', '2002refinanceaanewgeojson', '2002purchasenhwnewgeojson', '2002refinancenhwnewgeojson' ];
+		var toggleableLayerIds2003 = [ '2003purchaseasiannewgeojson', '2003refinanceasiannewgeojson', '2003purchasehisnewgeojson', '2003refinancehisnewgeojson', '2003purchaseaanewgeojson', '2003refinanceaanewgeojson', '2003purchasenhwnewgeojson', '2003refinancenhwnew5geojson' ];
+		var toggleableLayerIds2004 = [ '2004purchaseasiannewgeojson', '2004refinanceasiannewgeojson', '2004purchasehisnewgeojson', '2004refinancehisnewgeojson', '2004purchaseaanewgeojson', '2004refinanceaanewgeojson', '2004purchasenhwnewgeojson', '2004refinancenhwnew2geojson' ];
+		var toggleableLayerIds2005 = [ '2005purchaseasiannewgeojson', '2005refinanceasiannewgeojson', '2005purchasehisnewgeojson', '2005refinancehisnewgeojson', '2005purchaseaanewgeojson', '2005refinanceaanewgeojson', '2005purchasenhwnewgeojson', '2005refinancenhwnewgeojson' ];
+		var toggleableLayerIds2006 = [ '2006purchaseasiannewgeojson', '2006refinanceasiannewgeojson', '2006purchasehisnewgeojson', '2006refinancehisnewgeojson', '2006purchaseaanewgeojson', '2006refinanceaanewgeojson', '2006purchasenhwnewgeojson', '2006refinancenhwnewgeojson' ];
+		var toggleableLayerIds2007 = [ '2007purchaseasiannewgeojson', '2007refinanceasiannewgeojson', '2007purchasehisnewgeojson', '2007refinancehisnewgeojson', '2007purchaseaanewgeojson', '2007refinanceaanewgeojson', '2007purchasenhwnewgeojson', '2007refinancenhwnewgeojson' ];
+		var toggleableLayerIds2008 = [ '2008purchaseasiannewgeojson', '2008refinanceasiannewgeojson', '2008purchasehisnewgeojson', '2008refinancehisnewgeojson', '2008purchaseaanewgeojson', '2008refinanceaanewgeojson', '2008purchasenhwnewgeojson', '2008refinancenhwnewgeojson' ];
+		var toggleableLayerIds2009 = [ '2009purchaseasiannewgeojson', '2009refinanceasiannewgeojson', '2009purchasehisnewgeojson', '2009refinancehisnewgeojson', '2009purchaseaanewgeojson', '2009refinanceaanewgeojson', '2009purchasenhwnewgeojson', '2009refinancenhwnewgeojson' ];
+		var toggleableLayerIds2010 = [ '2010purchaseasiannewgeojson', '2010refinanceasiannewgeojson', '2010purchasehisnewgeojson', '2010refinancehisnewgeojson', '2010purchaseaanewgeojson', '2010refinanceaanewgeojson', '2010purchasenhwnewgeojson', '2010refinancenhwnewgeojson' ];
+		var toggleableLayerIds2011 = [ '2011purchaseasiannewgeojson', '2011refinanceasiannewgeojson', '2011purchasehisnewgeojson', '2011refinancehisnewgeojson', '2011purchaseaanewgeojson', '2011refinanceaanewgeojson', '2011purchasenhwnewgeojson', '2011refinancenhwnewgeojson' ];
+		var toggleableLayerIds2012 = [ '2012purchaseasiannewgeojson', '2012refinanceasiannewgeojson', '2012purchasehisnewgeojson', '2012refinancehisnewgeojson', '2012purchaseaanewgeojson', '2012refinanceaanewgeojson', '2012purchasenhwnewgeojson', '2012refinancenhwnewgeojson' ];
+		var toggleableLayerIds2013 = [ '2013purchaseasiannewgeojson', '2013refinanceasiannewgeojson', '2013purchasehisnewgeojson', '2013refinancehisnewgeojson', '2013purchaseaanewgeojson', '2013refinanceaanewgeojson', '2013purchasenhwnewgeojson', '2013refinancenhwnewgeojson' ];
+		var toggleableLayerIds2014 = [ '2014purchaseasiannewgeojson', '2014refinanceasiannewgeojson', '2014purchasehisnewgeojson', '2014refinancehisnewgeojson', '2014purchaseaanewgeojson', '2014refinanceaanewgeojson', '2014purchasenhwnewgeojson', '2014refinancenhwnewgeojson' ];
+		var toggleableLayerIds2015 = [ '2015purchaseasiannew2geojson', '2015refinanceasiannew2geojson', '2015purchasehisnew2geojson', '2015refinancehisnew2geojson', '2015purchaseaanew2geojson', '2015refinanceaanew2geojson', '2015purchasenhwnew2geojson', '2015refinancenhwnew2geojson' ];
+		var toggleableLayerIds2016 = [ '2016purchaseasiannewgeojson', '2016refinanceasiannewgeojson', '2016purchasehisnewgeojson', '2016refinancehisnewgeojson', '2016purchaseaanewgeojson', '2016refinanceaanewgeojson', '2016purchasenhwnewgeojson', '2016refinancenhwnewgeojson' ];
+		
+		var allToggles = [ toggleableLayerIds2001, toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016 ];
+		var allTogglesBlur = [ toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016, toggleableLayerIds2001 ];
+  
+		var mapYearBox = document.getElementById('ub-map-year');
+		var mapEffect = document.getElementById('ub-map-year-blur');
+		
+		var	mapBase = new mapboxgl.Map({
+      		container: 'ub-map',
+      		style: 'mapbox://styles/urbaninstitute/cj8otpvg492922rnox8pjw8dg?optimize=true',
+			center: [-95,42.15],
+			pitchWithRotate: false,
+			renderWorldCopies: false,
+			minZoom: 3.6,
+			maxZoom: 10.6,
+			zoom: 3.6
+    	});
+		mapBase.addControl(new mapboxgl.NavigationControl());
+		mapBase.scrollZoom.disable();
+		mapBase.dragRotate.disable();
+		mapBase.touchZoomRotate.disableRotation();
 
+		var	mapBaseText = new mapboxgl.Map({
+      		container: 'ub-map-text',
+      		style: 'mapbox://styles/urbaninstitute/cj8ujp4fnedvf2roxntalqmwq?optimize=true',
+			center: [-95,42.15],
+			pitchWithRotate: false,
+			renderWorldCopies: false,
+			minZoom: 3.6,
+			maxZoom: 10.6,
+			zoom: 3.6
+    	});
+		mapBaseText.addControl(new mapboxgl.NavigationControl());
+		mapBaseText.scrollZoom.disable();
+		mapBaseText.dragRotate.disable();
+		mapBaseText.touchZoomRotate.disableRotation();
+
+
+		var	mapYear = new mapboxgl.Map({
+      		container: 'ub-map-year',
+			style: 'mapbox://styles/urbaninstitute/cj95zz8wo03v22smcahc1rbbm?optimize=true', // 2001 reduced
+			center: [-95,42.15],
+			pitchWithRotate: false,
+			renderWorldCopies: false,
+			minZoom: 3.6,
+			maxZoom: 10.6,
+			zoom: 3.6
+    	});
+		mapYear.addControl(new mapboxgl.NavigationControl());
+		mapYear.scrollZoom.disable();
+		mapYear.dragRotate.disable();
+		mapYear.touchZoomRotate.disableRotation();
+		
+		
+		var	mapYearBlur = new mapboxgl.Map({
+      		container: 'ub-map-year-blur',
+			style: 'mapbox://styles/urbaninstitute/cj97f3n4a18pa2rnxf4jqspw3?optimize=true', // 2002 reduced
+			center: [-95,42.15],
+			pitchWithRotate: false,
+			renderWorldCopies: false,
+			minZoom: 3.6,
+			maxZoom: 10.6,
+			zoom: 3.6
+    	});
+		mapYearBlur.addControl(new mapboxgl.NavigationControl());
+		mapYearBlur.scrollZoom.disable();
+		mapYearBlur.dragRotate.disable();
+		mapYearBlur.touchZoomRotate.disableRotation();
+
+		
+		// ********************* START
+		setTimeout(function(){
+			$('#ub-loading-overlay').fadeOut(800);
+		}, 1500);		
+		setTimeout(function(){
+			mapSlideshow();
+		},3000);		
+
+		
+		// ********************* ZOOM TO CITIES
+		var cities = {
+			'seattle': {
+        		center: [-122.335167,47.608013],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'sanfrancisco': {
+        		center: [-122.431297,37.773972],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'losangeles': {
+        		center: [-118.243683,34.052235],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'phoenix': {
+        		center: [-112.074036,33.448376],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'dallas': {
+        		center: [-96.805077,32.783585],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'houston': {
+        		center: [-95.366302,29.761993],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'chicago': {
+        		center: [-87.623177,41.881832],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'detroit': {
+        		center: [-83.060303,42.348495],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'atlanta': {
+        		center: [-84.386330,33.753746],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'nyc': {
+        		center: [-73.968285,40.785091],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'philly': {
+        		center: [-75.165222,39.952583],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'wasdc': {
+        		center: [-77.036560,38.897957],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+			'miami': {
+        		center: [-80.191788,25.761681],
+        		zoom: 10.6,
+        		pitch: 0
+			},
+		};
+		
+		var cityNames = Object.keys(cities);
+		var citiesLength = cityNames.length;
+		for (var cc = 0; cc < citiesLength; cc++) {
+        	var cityName = cityNames[cc];
+			var cityNameLong = '';
+			if (cc==0) {
+				cityNameLong = 'Seattle';
+			} else if (cc==1) {
+				cityNameLong = 'San Francisco';
+			} else if (cc==2) {
+				cityNameLong = 'Los Angeles';
+			} else if (cc==3) {
+				cityNameLong = 'Phoenix';
+			} else if (cc==4) {
+				cityNameLong = 'Dallas';
+			} else if (cc==5) {
+				cityNameLong = 'Houston';
+			} else if (cc==6) {
+				cityNameLong = 'Chicago';
+			} else if (cc==7) {
+				cityNameLong = 'Detroit';
+			} else if (cc==8) {
+				cityNameLong = 'Atlanta';
+			} else if (cc==9) {
+				cityNameLong = 'New York City';
+			} else if (cc==10) {
+				cityNameLong = 'Philadelphia';
+			} else if (cc==11) {
+				cityNameLong = 'Washington, DC';
+			} else {
+				cityNameLong = 'Miami';
+			}
+			var cityButton = document.createElement('a');
+			cityButton.href = '#';
+			cityButton.className = 'ub-city-button';
+    		cityButton.innerHTML = cityNameLong;
+			cityButton.setAttribute("title", 'Click to center and zoom in '+cityNameLong);
+			cityButton.setAttribute("id", cityName);
+			
+			var cityButtons = document.getElementById('ub-cities');
+			cityButtons.appendChild(cityButton);					
+		} // Close for (cities loop)
+		
+		document.getElementById('nyc').addEventListener('click', function () {
+			mapBase.flyTo(cities['nyc']);
+		});
+		document.getElementById('losangeles').addEventListener('click', function () {
+			mapBase.flyTo(cities['losangeles']);
+		});
+		document.getElementById('chicago').addEventListener('click', function () {
+			mapBase.flyTo(cities['chicago']);
+		});
+		document.getElementById('dallas').addEventListener('click', function () {
+			mapBase.flyTo(cities['dallas']);
+		});
+		document.getElementById('houston').addEventListener('click', function () {
+			mapBase.flyTo(cities['houston']);
+		});
+		document.getElementById('wasdc').addEventListener('click', function () {
+			mapBase.flyTo(cities['wasdc']);
+		});
+		document.getElementById('philly').addEventListener('click', function () {
+			mapBase.flyTo(cities['philly']);
+		});
+		document.getElementById('miami').addEventListener('click', function () {
+			mapBase.flyTo(cities['miami']);
+		});
+		document.getElementById('atlanta').addEventListener('click', function () {
+			mapBase.flyTo(cities['atlanta']);
+		});
+		document.getElementById('sanfrancisco').addEventListener('click', function () {
+			mapBase.flyTo(cities['sanfrancisco']);
+		});
+		document.getElementById('phoenix').addEventListener('click', function () {
+			mapBase.flyTo(cities['phoenix']);
+		});
+		document.getElementById('detroit').addEventListener('click', function () {
+			mapBase.flyTo(cities['detroit']);
+		});
+		document.getElementById('seattle').addEventListener('click', function () {
+			mapBase.flyTo(cities['seattle']);
+		});
+		
+		
+		// ********************* COORDINATION OF MOVEMENT AND SCALE BETWEEN MAPS
+		var disable = false;
+		mapBase.on("move", function() {
+			if (!disable) {
+				var center = mapBase.getCenter();
+				var zoom = mapBase.getZoom();
+				disable = true;
+				mapBaseText.setCenter(center);mapBaseText.setZoom(zoom);				
+				mapYear.setCenter(center);mapYear.setZoom(zoom);
+				mapYearBlur.setCenter(center);mapYearBlur.setZoom(zoom);
+				disable = false;     
+    		}
+		});
+		mapBaseText.on("move", function() {
+			if (!disable) {
+				var center = mapBaseText.getCenter();
+				var zoom = mapBaseText.getZoom();
+				disable = true;
+				mapBase.setCenter(center);mapBase.setZoom(zoom);				
+				mapYear.setCenter(center);mapYear.setZoom(zoom);
+				mapYearBlur.setCenter(center);mapYearBlur.setZoom(zoom);
+				disable = false;     
+    		}
+		});
+		mapYear.on("move", function() {
+			if (!disable) {
+				var center = mapYear.getCenter();
+				var zoom = mapYear.getZoom();
+				disable = true;
+				mapBase.setCenter(center);mapBase.setZoom(zoom);
+				mapBaseText.setCenter(center);mapBaseText.setZoom(zoom);
+				mapYearBlur.setCenter(center);mapYearBlur.setZoom(zoom);
+				disable = false;     
+    		}
+		});
+		mapYearBlur.on("move", function() {
+			if (!disable) {
+				var center = mapYearBlur.getCenter();
+				var zoom = mapYearBlur.getZoom();
+				disable = true;
+				mapBase.setCenter(center);mapBase.setZoom(zoom);
+				mapBaseText.setCenter(center);mapBaseText.setZoom(zoom);
+				mapYear.setCenter(center);mapYear.setZoom(zoom);
+				disable = false;     
+    		}
+		});
+
+		var currentYear = 0;
+		var currentSlide = 0;
+		var previousSlide = 0;
+		
+		// ********************* SLIDESHOW OF YEARS	
+		function mapSlideshow() {
+			var to = null;
+			var yearButtons = document.querySelectorAll('.ub-graphic-container ul li a');
+			var yearButtonsLength = yearButtons.length;
+		
+			var slides = [
+				'cj95zz8wo03v22smcahc1rbbm', // 2001 reduced
+				'cj97f3n4a18pa2rnxf4jqspw3', // 2002 reduced
+				'cj991g5az2w8w2rlbsfrlkkn8', // 2003 reduced 2
+				'cj992l2pa2x722rqo9mabcuf2', // 2004 reduced 2
+				'cj98q8p712lwu2rqe62fjoat6', // 2005 reduced
+				'cj98qlqoy2lro2sn7gikvnb3p', // 2006 reduced
+				'cj99uxj2t2tjm2rmofueopcf4', // 2007 reduced
+				'cj99we2wq2v0q2sth4fv683no', // 2008 reduced
+				'cj99wey4u2u7d2rpeqodbnkcv', // 2009 reduced
+				'cj9baenaq44xr2rqcj841rv0s', // 2010 reduced
+				'cj9c38sg64vq42rqdxhzceyye', // 2011 reduced
+				'cj9cnoz4k697b2slb1vj1hdwe', // 2012 reduced
+				'cj9co512w5gar2stho27dw15r', // 2013 reduced
+				'cj9coha735fmq2rqcvdy2z7fr', // 2014 reduced
+				'cj9dz1s6y6nhp2so64kl7mmdc', // 2015 reduced
+				'cj9e00xdr7j9z2spfqopedm2a'  // 2016 reduced
+			]
+			var slidesBlur = [
+				'cj97f3n4a18pa2rnxf4jqspw3', // 2002 reduced
+				'cj991g5az2w8w2rlbsfrlkkn8', // 2003 reduced 2
+				'cj992l2pa2x722rqo9mabcuf2', // 2004 reduced 2
+				'cj98q8p712lwu2rqe62fjoat6', // 2005 reduced
+				'cj98qlqoy2lro2sn7gikvnb3p', // 2006 reduced
+				'cj99uxj2t2tjm2rmofueopcf4', // 2007 reduced
+				'cj99we2wq2v0q2sth4fv683no', // 2008 reduced
+				'cj99wey4u2u7d2rpeqodbnkcv', // 2009 reduced
+				'cj9baenaq44xr2rqcj841rv0s', // 2010 reduced
+				'cj9c38sg64vq42rqdxhzceyye', // 2011 reduced
+				'cj9cnoz4k697b2slb1vj1hdwe', // 2012 reduced
+				'cj9co512w5gar2stho27dw15r', // 2013 reduced
+				'cj9coha735fmq2rqcvdy2z7fr', // 2014 reduced
+				'cj9dz1s6y6nhp2so64kl7mmdc', // 2015 reduced
+				'cj9e00xdr7j9z2spfqopedm2a', // 2016 reduced
+				'cj95zz8wo03v22smcahc1rbbm' // 2001 reduced
+			]
+			var slidesLength = slides.length;
+		
+			var slideInterval = setInterval(nextSlide,4000);
+		//	clearInterval(slideInterval);
+
+			function nextSlide(){
+				goToSlide(currentSlide+1);
+				to = setTimeout(function(){
+					goToSlideBlur(currentSlide+1);
+				}, 3500);
+				goToYear(currentYear+1);
+			}
+			function previousSlide(){
+				goToSlide(currentSlide-1);
+				setTimeout(function(){
+					goToSlideBlur(currentSlide-1);
+				}, 3500);
+				goToYear(currentYear-1);
+			}
+
+			function goToSlide(n){
+				mapYearBox.className= 'slide showing';
+				previousSlide = currentSlide;
+				currentSlide = (n+slides.length)%slidesLength;
+				mapYear.setStyle('mapbox://styles/urbaninstitute/'+slides[currentSlide]+'?optimize=true');
+				mapYear.on('style.load', function() {
+					loadToggle();
+					mapEffect.className= 'slide';
+				});
+			}
+			function goToSlideBlur(n){
+				mapEffect.className= 'slide showing';	
+				mapYearBlur.setStyle('mapbox://styles/urbaninstitute/'+slidesBlur[currentSlide]+'?optimize=true');
+				mapYearBlur.on('style.load', function() {
+					loadToggleBlur();
+					mapYearBox.className= 'slide';
+				});
+			}
+			function goToSlideYear(n){
+				mapEffect.className= 'slide showing';	
+				mapYearBlur.setStyle('mapbox://styles/urbaninstitute/'+slides[previousSlide]+'?optimize=true');
+				mapYearBlur.on('style.load', function() {
+					loadToggleYear();
+					mapYearBox.className= 'slide';
+				});
+			}
+			function goToYear(n){
+				yearButtons[currentYear].className = 'ub-year';
+				currentYear = (n+yearButtons.length)%yearButtonsLength;
+				yearButtons[currentYear].className = 'ub-year-active';
+			}
+
+			var playing = true;
+			var pauseButton = document.getElementById('pause');
+
+			function pauseSlideshow(){
+				pauseButton.innerHTML = '&#9658;'; // play character
+				pauseButton.className = 'ub-controls';
+				playing = false;
+				clearInterval(slideInterval);
+				if(to){
+					clearTimeout(to);
+  				}
+			}
+
+			function playSlideshow(){
+				pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
+				pauseButton.className = 'ub-controls active';
+				playing = true;
+				slideInterval = setInterval(nextSlide,4000);
+			}
+
+			pauseButton.onclick = function(){
+				if(playing){ pauseSlideshow(); }
+				else{ playSlideshow(); }
+			};
+
+			// ********************* YEARS TOGGLE BUTTONS
+			// 2001
+			var button2001 = document.getElementById('ub-2001');
+			button2001.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(0);
+				}, 100);				
+				goToYear(0);
+			};
+			// 2002
+			var button2002 = document.getElementById('ub-2002');
+			button2002.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(1);
+				}, 100);				
+				goToYear(1);
+			};
+			// 2003
+			var button2003 = document.getElementById('ub-2003');
+			button2003.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(2);
+				}, 100);				
+				goToYear(2);
+			};
+			// 2004
+			var button2004 = document.getElementById('ub-2004');
+			button2004.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(3);
+				}, 100);				
+				goToYear(3);
+			};
+			// 2005
+			var button2005 = document.getElementById('ub-2005');
+			button2005.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(4);
+				}, 100);				
+				goToYear(4);
+			};
+			// 2006
+			var button2006 = document.getElementById('ub-2006');
+			button2006.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(5);
+				}, 100);				
+				goToYear(5);
+			};
+			// 2007
+			var button2007 = document.getElementById('ub-2007');
+			button2007.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(6);
+				}, 100);				
+				goToYear(6);
+			};
+			// 2008
+			var button2008 = document.getElementById('ub-2008');
+			button2008.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(7);
+				}, 100);				
+				goToYear(7);
+			};
+			// 2009
+			var button2009 = document.getElementById('ub-2009');
+			button2009.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(8);
+				}, 100);				
+				goToYear(8);
+			};
+			// 2010
+			var button2010 = document.getElementById('ub-2010');
+			button2010.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(9);
+				}, 100);				
+				goToYear(9);
+			};
+			// 2011
+			var button2011 = document.getElementById('ub-2011');
+			button2011.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(10);
+				}, 100);				
+				goToYear(10);
+			};
+			// 2012
+			var button2012 = document.getElementById('ub-2012');
+			button2012.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(11);
+				}, 100);				
+				goToYear(11);
+			};
+			// 2013
+			var button2013 = document.getElementById('ub-2013');
+			button2013.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(12);
+				}, 100);				
+				goToYear(12);
+			};
+			// 2014
+			var button2014 = document.getElementById('ub-2014');
+			button2014.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(13);
+				}, 100);				
+				goToYear(13);
+			};
+			// 2015
+			var button2015 = document.getElementById('ub-2015');
+			button2015.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(14);
+				}, 100);				
+				goToYear(14);
+			};
+			// 2016
+			var button2016 = document.getElementById('ub-2016');
+			button2016.onclick = function(){
+				pauseSlideshow();
+			//	goToSlideYear(previousSlide);
+				setTimeout(function(){
+					goToSlide(15);
+				}, 100);				
+				goToYear(15);
+			};
+		};	// End of function mapSlideshow()
+		
+
+
+   		// ********************* LAYER TOGGLE
+		
+		// Purchase asian
+    	var toggleableLayerPurAsian = [ '2001purchaseasiannewgeojson', '2002purchaseasiannewgeojson', '2003purchaseasiannewgeojson', '2004purchaseasiannewgeojson', '2005purchaseasiannewgeojson', '2006purchaseasiannewgeojson', '2007purchaseasiannewgeojson', '2008purchaseasiannewgeojson', '2009purchaseasiannewgeojson', '2010purchaseasiannewgeojson', '2011purchaseasiannewgeojson', '2012purchaseasiannewgeojson', '2013purchaseasiannewgeojson', '2014purchaseasiannewgeojson', '2015purchaseasiannew2geojson', '2016purchaseasiannewgeojson', ];		
+		var linkPurAsian = document.getElementById('ub-purchase-asian-link');		
+		linkPurAsian.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurAsian[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				PurAsianOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurAsian[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				PurAsianOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		// Refinance asian
+    	var toggleableLayerRefiAsian = [ '2001refinanceasiannewgeojson', '2002refinanceasiannewgeojson', '2003refinanceasiannewgeojson', '2004refinanceasiannewgeojson', '2005refinanceasiannewgeojson', '2006refinanceasiannewgeojson', '2007refinanceasiannewgeojson', '2008refinanceasiannewgeojson', '2009refinanceasiannewgeojson', '2010refinanceasiannewgeojson', '2011refinanceasiannewgeojson', '2012refinanceasiannewgeojson', '2013refinanceasiannewgeojson', '2014refinanceasiannewgeojson', '2015refinanceasiannew2geojson', '2016refinanceasiannewgeojson', ];		
+		var linkRefiAsian = document.getElementById('ub-refinance-asian-link');
+		linkRefiAsian.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiAsian[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				RefiAsianOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiAsian[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				RefiAsianOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		
+		// Purchase hispanic
+    	var toggleableLayerPurHispanic = [ '2001purchasehisnewgeojson', '2002purchasehisnewgeojson', '2003purchasehisnewgeojson', '2004purchasehisnewgeojson', '2005purchasehisnewgeojson', '2006purchasehisnewgeojson', '2007purchasehisnewgeojson', '2008purchasehisnewgeojson', '2009purchasehisnewgeojson', '2010purchasehisnewgeojson', '2011purchasehisnewgeojson', '2012purchasehisnewgeojson', '2013purchasehisnewgeojson', '2014purchasehisnewgeojson', '2015purchasehisnew2geojson', '2016purchasehisnewgeojson', ];		
+		var linkPurHispanic = document.getElementById('ub-purchase-hispanic-link');		
+		linkPurHispanic.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurHispanic[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				PurHispanicOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurHispanic[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				PurHispanicOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		// Refinance hispanic
+    	var toggleableLayerRefiHispanic = [ '2001refinancehisnewgeojson', '2002refinancehisnewgeojson', '2003refinancehisnewgeojson', '2004refinancehisnewgeojson', '2005refinancehisnewgeojson', '2006refinancehisnewgeojson', '2007refinancehisnewgeojson', '2008refinancehisnewgeojson', '2009refinancehisnewgeojson', '2010refinancehisnewgeojson', '2011refinancehisnewgeojson', '2012refinancehisnewgeojson', '2013refinancehisnewgeojson', '2014refinancehisnewgeojson', '2015refinancehisnew2geojson', '2016refinancehisnewgeojson', ];		
+		var linkRefiHispanic = document.getElementById('ub-refinance-hispanic-link');
+		linkRefiHispanic.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiHispanic[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				RefiHispanicOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiHispanic[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				RefiHispanicOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		
+		// Purchase black
+    	var toggleableLayerPurBlack = [ '2001purchaseaanewgeojson', '2002purchaseaanewgeojson', '2003purchaseaanewgeojson', '2004purchaseaanewgeojson', '2005purchaseaanewgeojson', '2006purchaseaanewgeojson', '2007purchaseaanewgeojson', '2008purchaseaanewgeojson', '2009purchaseaanewgeojson', '2010purchaseaanewgeojson', '2011purchaseaanewgeojson', '2012purchaseaanewgeojson', '2013purchaseaanewgeojson', '2014purchaseaanewgeojson', '2015purchaseaanew2geojson', '2016purchaseaanewgeojson', ];		
+		var linkPurBlack = document.getElementById('ub-purchase-black-link');		
+		linkPurBlack.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurBlack[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				PurBlackOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();				
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurBlack[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				PurBlackOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		// Refinance black
+    	var toggleableLayerRefiBlack = [ '2001refinanceaanewgeojson', '2002refinanceaanewgeojson', '2003refinanceaanewgeojson', '2004refinanceaanewgeojson', '2005refinanceaanewgeojson', '2006refinanceaanewgeojson', '2007refinanceaanewgeojson', '2008refinanceaanewgeojson', '2009refinanceaanewgeojson', '2010refinanceaanewgeojson', '2011refinanceaanewgeojson', '2012refinanceaanewgeojson', '2013refinanceaanewgeojson', '2014refinanceaanewgeojson', '2015refinanceaanew2geojson', '2016refinanceaanewgeojson', ];
+		var linkRefiBlack = document.getElementById('ub-refinance-black-link');
+		linkRefiBlack.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiBlack[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				RefiBlackOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiBlack[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				RefiBlackOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		
+		// Purchase white
+    	var toggleableLayerPurWhite = [ '2001purchasenhwnewgeojson', '2002purchasenhwnewgeojson', '2003purchasenhwnewgeojson', '2004purchasenhwnewgeojson', '2005purchasenhwnewgeojson', '2006purchasenhwnewgeojson', '2007purchasenhwnewgeojson', '2008purchasenhwnewgeojson', '2009purchasenhwnewgeojson', '2010purchasenhwnewgeojson', '2011purchasenhwnewgeojson', '2012purchasenhwnewgeojson', '2013purchasenhwnewgeojson', '2014purchasenhwnewgeojson', '2015purchasenhwnew2geojson', '2016purchasenhwnewgeojson', ];		
+		var linkPurWhite = document.getElementById('ub-purchase-white-link');		
+		linkPurWhite.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurWhite[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				PurWhiteOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerPurWhite[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				PurWhiteOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		// Refinance white
+    	var toggleableLayerRefiWhite = [ '2001refinancenhwnew15geojson', '2002refinancenhwnewgeojson', '2003refinancenhwnew5geojson', '2004refinancenhwnew2geojson', '2005refinancenhwnewgeojson', '2006refinancenhwnewgeojson', '2007refinancenhwnewgeojson', '2008refinancenhwnewgeojson', '2009refinancenhwnewgeojson', '2010refinancenhwnewgeojson', '2011refinancenhwnewgeojson', '2012refinancenhwnewgeojson', '2013refinancenhwnewgeojson', '2014refinancenhwnewgeojson', '2015refinancenhwnew2geojson', '2016refinancenhwnewgeojson', ];		
+		var linkRefiWhite = document.getElementById('ub-refinance-white-link');
+		linkRefiWhite.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiWhite[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
+					}
+				}
+				this.className = 'ub-button';
+				RefiWhiteOff = true;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			} else {
+				for (var r = 0; r < 16; r++) {
+					if (r===currentYear) {
+						var layerToggle = toggleableLayerRefiWhite[r];
+						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
+					}
+				}
+				this.className = 'ub-button active';
+				RefiWhiteOff = false;
+				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
+				toggleAllIf();
+			}
+		};
+		
+		// Purchase all		
+		var linkPurAll = document.getElementById('ub-purchase-all-link');		
+		function toggleAllIf() {
+			if (PurAsianOff && PurHispanicOff && PurBlackOff && PurWhiteOff) {
+				linkPurAll.className = 'ub-button';	
+			} else {
+				linkPurAll.className = 'ub-button active';	
+			}
+			if (RefiAsianOff && RefiHispanicOff && RefiBlackOff && RefiWhiteOff) {
+				linkRefiAll.className = 'ub-button';	
+			} else {
+				linkRefiAll.className = 'ub-button active';	
+			}
+		};	// End of function toggleAllIf()
+		
+		linkPurAll.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				this.className = 'ub-button';
+			} else {
+				this.className = 'ub-button active';						
+			}
+			document.getElementById('ub-purchase-asian-link').click();
+			document.getElementById('ub-purchase-hispanic-link').click();
+			document.getElementById('ub-purchase-black-link').click();
+			document.getElementById('ub-purchase-white-link').click();
+		};
+		// Refinance all		
+		var linkRefiAll = document.getElementById('ub-refinance-all-link');
+		linkRefiAll.onclick = function(te) {
+			te.preventDefault();
+        	te.stopPropagation();
+			if (this.className=='ub-button active') {
+				this.className = 'ub-button';
+			} else {
+				this.className = 'ub-button active';						
+			}
+			document.getElementById('ub-refinance-asian-link').click();
+			document.getElementById('ub-refinance-hispanic-link').click();
+			document.getElementById('ub-refinance-black-link').click();
+			document.getElementById('ub-refinance-white-link').click();
+		};
+		
+		function loadToggle() {
+			for (var zt = 0; zt < 8; zt++) {
+				if(allButtons[zt]){
+					var layerPreToggle = allToggles[currentSlide][zt];
+					if (layerPreToggle!=='undefined') {
+						mapYear.setLayoutProperty(layerPreToggle, 'visibility', 'none');
+					} else {
+					}
+				}
+			}			
+		};	// End of function loadToggle()	
+		function loadToggleBlur() {
+			for (var xt = 0; xt < 8; xt++) {
+				if(allButtons[xt]){
+					var layerPreToggleBlur = allTogglesBlur[currentSlide][xt];
+					if (layerPreToggleBlur!=='undefined') {
+						mapYearBlur.setLayoutProperty(layerPreToggleBlur, 'visibility', 'none');
+					} else {
+					}
+				}
+			}			
+		};	// End of function loadToggleBlur()	
+		function loadToggleYear() {
+			for (var yt = 0; yt < 8; yt++) {
+				if(allButtons[yt]){
+					var layerPreToggleYear = allToggles[currentSlide][yt];
+					if (layerPreToggleYear!=='undefined') {
+						mapYearBlur.setLayoutProperty(layerPreToggleYear, 'visibility', 'none');
+					} else {
+					}
+				}
+			}			
+		};	// End of function loadToggleBlur()	
+    </script>
+
+	<!-- LINE CHART STARTS HERE -->
+	<script type="text/javascript" src="js/d3.v3.min.js"></script> 
+	<script>
+		var lineChart;
+		// Set the dimensions of the canvas / graph
+		var	margin = {top: 32, right: 0, bottom: 32, left: 0},
+		width = 960 + margin.left + margin.right,
+		height = 252 - margin.bottom,
+		heightBox = 252;
+ 
+		// Parse the date / time
+		var	parseDate = d3.time.format("%d-%b-%y").parse;
+		// Set the ranges
+		var	x = d3.time.scale().range([0, width-12]);
+		var	y = d3.scale.linear().range([height, 0]);
+ 
+		// Define the axes
+		var	xAxis = d3.svg.axis().scale(x)
+			.orient("top").ticks(16).tickSize(height+32, 0);;
+ 
+		var	yAxis = d3.svg.axis().scale(y)
+			.orient("left").ticks(5);
+
+		// Define the line
+		var	valueline = d3.svg.line()
+			.x(function(d) { return x(d.date); })
+			.y(function(d) { return y(d.prices); });
+		
+		// Adds the svg canvas
+		var svg = d3.select(".ub-graphic-container")
+			.append("svg")
+			.attr("viewBox","0 0 "+width+" "+heightBox)
+			.attr("preserveAspectRatio","xMinYMin meet")
+			.classed("ub-content-responsive", true)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			.classed("ub-line-container","true");
+ 
+		// Get the data
+		d3.csv("data/hmdadata.csv", function(error, data) {
+			data.forEach(function(d) {
+				d.date = parseDate(d.date);
+				d.prices = d.prices;
+			});
+			// Scale the range of the data
+			x.domain(d3.extent(data, function(d) { return d.date; }));
+			y.domain([100, d3.max(data, function(d) { return d.prices; })]);
+ 
+			// Add the X Axis
+			svg.append("g")		
+				.attr("class", "x axis")
+				.attr("transform", "translate(6," + height + ")")
+				.call(xAxis);
+
+			// Add the valueline path
+			lineChart = svg.append("path")
+				.attr("transform", "translate(6,0)")
+				.attr("class", "line")
+				.attr("d", valueline(data));
+			});
+
+			// Graph title
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-title", "true")
+				.append('text')
+				.text('An interactive look at the boom and bust')
+				.attr("transform", "translate(20,30)");
+			// Graph line legend
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-name", "true")
+				.append('text')
+				.text('Home')
+				.attr("transform", "translate(213,154)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-name", "true")
+				.append('text')
+				.text('Price')
+				.attr("transform", "translate(213,176)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-name", "true")
+				.append('text')
+				.text('Index')
+				.attr("transform", "translate(213,198)");
+			// Graph first caption
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption-title", "true")
+				.append('text')
+				.text('2001 - baseline')
+				.attr("transform", "translate(20,68)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('Reasonable credit standards,')
+				.attr("transform", "translate(20,85)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('low prices.')
+				.attr("transform", "translate(20,102)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('12.6 million new mortgages.')
+				.attr("transform", "translate(20,119)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('14% African American')
+				.attr("transform", "translate(20,136)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('or Hispanic.')
+				.attr("transform", "translate(20,153)");
+			// Graph second caption
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption-title", "true")
+				.append('text')
+				.text('2006 - a boom')
+				.attr("transform", "translate(314,170)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('Easy credit, high prices.')
+				.attr("transform", "translate(314,187)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('12.2 million new mortgages.')
+				.attr("transform", "translate(314,204)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('25% African American or Hispanic.')
+				.attr("transform", "translate(314,221)");
+			// Graph third caption
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption-title", "true")
+				.append('text')
+				.text('2009 - a bust')
+				.attr("transform", "translate(487,36)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('Tight credit, reduced prices.')
+				.attr("transform", "translate(487,53)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('8.3 million new mortgages.')
+				.attr("transform", "translate(487,70)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('12% African American or Hispanic.')
+				.attr("transform", "translate(487,87)");		
+			// Graph fourth caption
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption-title", "true")
+				.append('text')
+				.text('2016 - recovering')
+				.attr("transform", "translate(829,157)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('Tight credit, high prices.')
+				.attr("transform", "translate(795,174)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('7.5 million new mortgages.')
+				.attr("transform", "translate(777,191)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-caption", "true")
+				.append('text')
+				.text('16.9% African American or Hispanic.')
+				.attr("transform", "translate(717,208)");		
+		
+			// Graph first number
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month", "true")
+				.append('text')
+				.text('Jan. 2001')
+				.attr("transform", "translate(20,180)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month-number", "true")
+				.append('text')
+				.text('109.8')
+				.attr("transform", "translate(20,197)");
+			// Graph first number line
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "6")
+				.attr("y1", "175")
+				.attr("x2", "6")
+				.attr("y2", "223");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "6")
+				.attr("y1", "175")
+				.attr("x2", "18")
+				.attr("y2", "175");
+			// Graph second number
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month", "true")
+				.append('text')
+				.text('April 2006')
+				.attr("transform", "translate(314,118)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month-number", "true")
+				.append('text')
+				.text('193.7')
+				.attr("transform", "translate(314,135)");
+			// Graph second number line
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "318")
+				.attr("y1", "38")
+				.attr("x2", "318")
+				.attr("y2", "103");
+			// Graph third number
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month", "true")
+				.append('text')
+				.text('March 2009')
+				.attr("transform", "translate(487,120)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month-number", "true")
+				.append('text')
+				.text('135.4')
+				.attr("transform", "translate(487,137)");
+			// Graph third number line
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "492")
+				.attr("y1", "142")
+				.attr("x2", "492")
+				.attr("y2", "164");
+			// Graph fourth number
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month", "true")
+				.append('text')
+				.text('Dec. 2016')
+				.attr("transform", "translate(872,110)");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-month-number", "true")
+				.append('text')
+				.text('183.3')
+				.attr("transform", "translate(899,127)");
+			// Graph fourth number lines
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "954")
+				.attr("y1", "63")
+				.attr("x2", "954")
+				.attr("y2", "105");
+			var svgText = d3.select("svg")
+				.append("g")
+				.classed("ub-graph-line", "true")
+				.append('line')
+				.attr("x1", "944")
+				.attr("y1", "105")
+				.attr("x2", "954")
+				.attr("y2", "105");
+
+			// Draw four points over the line
+			d3.csv("data/hmdadatapoints.csv", function(error, datapoints) {
+				datapoints.forEach(function(d) {
+					d.date = parseDate(d.date);
+					d.prices = d.prices;
+				});
+				var circles = svg.append("g")
+					.attr("class", "ub-points")
+					.selectAll('circle')
+					.data(datapoints)
+    				.enter()
+					.append('circle')
+					.attr("transform", "translate(6,0)")
+					.attr('cy', function(d){
+						return y(d.prices);
+					})
+					.attr('cx', function(d){
+						return x(d.date);
+					})
+					.attr('r',6);
+			});
+	</script>
+		
+
+<script>
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () { 
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),  m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m) 
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); 
+ga('create', 'UA-57529944-1', 'auto'); 
+ga('send', 'pageview');
 </script>
 
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <span id="parsely-cfg" data-parsely-site="urban.org"></span>
+</div>
+<script>
+    (function(s, p, d) {
+      var h=d.location.protocol, i=p+"-"+s,
+          e=d.getElementById(i), r=d.getElementById(p+"-root"),
+          u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+          :"static."+p+".com";
+      if (e) return;
+      e = d.createElement(s); e.id = i; e.async = true;
+      e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+    })("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
 
-</body>
-
+      
+     
+          <script src="js/header.js"></script>    
+        
+  </body>
 </html>

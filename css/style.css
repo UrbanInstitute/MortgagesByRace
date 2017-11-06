@@ -1,0 +1,468 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+     border: 0px none;
+     margin: 0px;
+     padding: 0px;
+     vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+     display: block;
+}
+
+body, html {
+     color: #000;
+     font-family: "Lato",sans-serif;
+
+     margin: 0px;
+     padding: 0px;
+     text-align: left;
+
+}
+
+ol, ul {
+
+}
+
+blockquote, q {
+     quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+     content: none;
+}
+
+table {
+     border-collapse: collapse;
+     border-spacing: 0px;
+}
+
+*, *::before, *::after {
+     box-sizing: border-box;
+}
+
+.clearfix::after {
+     clear: both;
+     content: "";
+     display: table;
+}
+
+
+
+a{
+ color:#1696d2;
+ text-decoration: none;
+   
+}
+
+a:hover{
+ color:#000;
+ text-decoration: none;    
+    
+}
+
+p{
+    margin-bottom:10px;
+    line-height: 1.3;
+}
+
+
+
+.bold{
+    
+    font-weight: 700;
+}
+
+.emphasis{
+    
+   font-style: italic;
+}
+
+
+
+/************subnav***************/
+.subnav{
+    width: 100%;
+    position: fixed;
+    top: 51px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.subnav ul{
+    text-align: center;
+    margin: 0px;
+}
+.subnav ul li{
+    display: inline-block;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    padding-left: 24px;
+    padding-top: 10px;
+    
+}
+
+
+
+
+
+
+/*****************mobile chapter (replacing the subnav for smaller screens) ******************/
+
+#mobilenavcontainer{
+    display: none;
+}
+
+
+.show-menu {
+	display: none;
+    margin-top:50px;
+
+}
+
+
+/*Style for menu links*/
+ul#menu li a {
+    display: block;
+    min-width: 140px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    height: 36px;
+    padding-top: 8px;
+}
+
+/*Hover state for top level links*/
+ul#menu li:hover a {
+  color: #0096d2;
+}
+
+/*Style for dropdown links*/
+ul#menu li:hover ul a {
+	background: #333;
+color:#fff;
+border-right-color: #222;
+    border-right:1px solid;
+    border-color: #222;
+    border-top:5px solid;
+    border-top-color:#222;
+}
+
+
+
+
+
+/***********structure***********/
+.wrapper{
+    width:100%;
+    margin:0 auto;
+    padding-top: 49px;
+    border-top:1px solid #eee;
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 0px;
+
+}
+
+.content ul{
+   list-style: outside none none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.content ul li{
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+   
+    padding-left: 1%;
+
+}
+
+
+
+.text{
+    width:500px;
+    margin:35px 75px;
+}
+
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+
+/********header (below urban menu)**********/
+
+
+.headerimage{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    top: 50px;
+}
+
+#heroimage{
+   background-image: url("../img/preschool.jpg");
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/*footer*/
+
+footer {
+  position: relative;
+    background-color: #f1f2f2;
+    margin-top: 185px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    bottom: 0;
+   overflow: hidden;
+     height:auto;
+     z-index: 10000;  
+ 
+}
+@media (max-height: 880px){
+  footer{
+    margin-top: 25px;
+  }
+}
+footer .content{
+  
+    max-width: 1100px;
+
+}
+   
+
+footer h4 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.3;
+     text-transform: uppercase;
+    font-weight: 700;
+}
+
+#left {
+  float: left;
+  width: 45%;
+  padding-left: 0px;
+  padding-right:0px;
+
+}
+
+#right {
+
+  float: right;
+  width: 45%;
+   padding-right: 0px;
+  padding-left: 0px;
+    font-size:14px;
+    line-height: 1.3;
+}
+
+.footerButton{
+  float: left;
+  height: 40px;
+  width: 135px;
+  border: 1px solid #333;
+  cursor: pointer;
+  font: 13px Lato;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none !important;
+  color: #333 !important;
+}
+.footerButton:hover{
+  background: #fdbf11;
+  color: #fff !important;
+}
+.footerButton.researchButton{
+  margin-left: 15px;
+}
+.footerTopP{
+  clear: both;
+  padding-top: 14px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer h2 {
+    text-transform: uppercase;
+     font-weight: 700;
+}
+
+footer h3, footer h4{
+   font-weight: 700; 
+}
+
+.credits {
+    font-size: 14px;
+    margin-top: 1em;
+    margin-bottom: 16px;
+}
+
+.job {
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+
+.urbanstatement {
+    font-style: italic;
+    color: #666666;
+    font-size: 13px;
+    margin-bottom: 1em;
+}
+
+.about-data
+{
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 1000px) {
+   
+    .subnav a{
+        font-size:14px;
+    }
+}
+
+
+
+/*browser windows smaller than 850px*/
+@media (max-width: 1180px) {
+  .wrapper {width:100%; padding-top:49px;}
+  .content {width:auto; padding:0px0px}
+  .container {width:auto; padding:0px 0px; margin-bottom: 0px;}
+ 
+
+    
+.subnav {
+display: none;
+}
+    
+#mobilenavcontainer {
+width: 100%;
+position: fixed;
+top: 0px;
+height: 45px;
+display: block;  
+    z-index: 11;
+}
+    
+.show-menu{
+    display: block;
+    width: 100%;
+    position: fixed;
+    text-decoration: none;
+    color: #fff;
+    background: #0096d2;
+    text-align: center;
+    padding: 10px 0;   
+    } 
+    
+    
+/*Hide checkbox*/
+input[type=checkbox]:unchecked ~ #menu{
+display: none;
+visibility:hidden;
+
+    
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    height: 150px;
+       z-index: 10;
+   
+}
+    
+ul#menu {
+    float:none;
+    display: none; 
+    text-align: center;
+    list-style:none;
+    margin:0px;
+}
+
+#menu li{
+    margin-bottom:0px;
+    list-style:none;
+    padding-left:0px; 
+}
+
+.headerimage{
+        top:44px;
+    }
+    
+    
+    #left{ width:100%;}
+    #right{ width:100%; margin-top:30px;}
+}
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*browser windows smaller than 850px*/
+@media (max-width: 399px) {
+   .wrapper {padding-top:39px;} 
+   .headerimage{ height:160px;}
+
+    .overhalf{width:100%;}
+}
+
+
+
+@media (max-width: 600px) and (min-width:400px) {
+   .wrapper {padding-top:80px;} 
+   .headerimage{ height:250px;}
+    .overhalf{width:100%;}
+}
+
+
+
+
+.full-col {
+ 
+  width: 100%;
+
+}
+
+.container {
+
+    margin-bottom: 0px;
+    padding:0px 0px;
+ 
+}
+#corr-date{
+  font-style: italic;
+  font-size: 16px;
+}
+#corr-corr{
+  font-style: italic;
+  font-size: 16px;
+}
