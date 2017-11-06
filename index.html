@@ -123,9 +123,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div class="ub-intro-wrap">
 				<div class="ub-intro">
 					<h1>An interactive view of the housing boom and bust</h1>
-					<p class="ub-authors">By Bing Bai, Bhargavi Ganesh, and Aaron Williams</p>
+					
 					<p class="ub-intro-italic">This map was originally published in September 2013 and has been updated annually as new Home Mortgage Disclosure Act data become available. This 2017 update incorporates 2016 mortgage originations and includes information on purchase and refinance loans.</p>
-					<p class="ub-top">Since 2008, the tight credit environment has <a href="https://www.urban.org/policy-centers/housing-finance-policy-center/projects/housing-credit-availability-index">constrained mortgage lending</a> and <a href="https://www.urban.org/urban-wire/increasing-access-mortgages-minorities">disproportionately affected black and Hispanic households</a>. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to <a href="https://www.urban.org/research/publication/less-equal-racial-disparities-wealth-accumulation">build wealth through homeownership</a>. Credit remains tight today while home prices have reached their&nbsp;pre-crisis peak, further limiting affordable housing options for minority homebuyers.</p>
+					<p class="ub-top">Since 2008, the tight credit environment has <a href="https://www.urban.org/policy-centers/housing-finance-policy-center/projects/housing-credit-availability-index" target="_blank">constrained mortgage lending</a> and <a href="https://www.urban.org/urban-wire/increasing-access-mortgages-minorities" target="_blank">disproportionately affected black and Hispanic households</a>. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to <a href="https://www.urban.org/research/publication/less-equal-racial-disparities-wealth-accumulation" target="_blank">build wealth through homeownership</a>. Credit remains tight today while home prices have reached their precrisis peak, further limiting affordable housing options for minority homebuyers.</p>
 				</div>
 			</div>
 			<div id="ub-loading-overlay">
@@ -207,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<p class="ub-bottom">Since 2008, the tight credit environment has constrained mortgage lending and disproportionately affected black and Hispanic households. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to build wealth through homeownership. Credit remains tight today while home prices have risen to within 0.5 percent of their pre-crisis peak, further limiting affordable housing options for minority homebuyers.</p>
 			</div>
 			<div class="ub-graphic-footer">
-				<p><strong>Source:</strong> Urban Institute analysis of Home Mortgage Disclosure Data. Home Price Index is based on CoreLogic HPI.</p>
+				<p><strong>Source:</strong> Urban Institute analysis of Home Mortgage Disclosure Act data. <br> <strong>Note:</strong> Home Price Index is based on the Home Price Index by CoreLogic.</p>
 				<p class="ub-urban"><span>Urban</span> Institute</p>
 			</div>
 		</div>
@@ -232,16 +232,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h4>Project credits</h4>
                     <div class="urbanstatement">
                       <p>The Housing Finance Policy Center (HFPC) was launched with generous support at the leadership level from the Citi Foundation and John D. and Catherine T. MacArthur Foundation. Additional support was provided by The Ford Foundation and The Open Society Foundation.</p>
-                      <p>Ongoing support for HFPC is also provided by the Housing Finance Innovation Forum, a group of organizations and individuals that support high-quality independent research that informs evidence-based policy development. Funds raised through the Forum provide flexible resources, allowing HFPC to anticipate and respond to emerging policy issues with timely analysis. This funding supports HFPC&rsquo;s research, outreach and engagement, and general operating activities.<br>
-                        This brief was funded by these combined sources. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission.</p>
-                      <p>The views expressed are those of the authors and should not be attributed<br>
-                        to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available here.</p>
+                      <p>Ongoing support for HFPC is also provided by the Housing Finance Innovation Forum, a group of organizations and individuals that support high-quality independent research that informs evidence-based policy development. Funds raised through the Forum provide flexible resources, allowing HFPC to anticipate and respond to emerging policy issues with timely analysis. This funding supports HFPC&rsquo;s research, outreach and engagement, and general operating activities.</p>
+                      <p>This feature was funded by these combined sources. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission.</p>
+                      <p>The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href="https://www.urban.org/support" target="_blank">here</a>.</p>
                     </div>
 
                     <h3 class="job">Research</h3>
                   <p>Bing Bai and Bhargavi Ganesh </p>
 <h3 class="job">Design and Development</h3>
-<p>5W Infographics, Ben Chartof, and Jerry Ta</p>
+<p>5W Infographics, Ben Chartoff, and Jerry Ta</p>
 <h3 class="job">Editorial</h3>
                     <p>David Hinson</p>
                     <h3 class="job">Writing</h3>
@@ -458,19 +457,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			} else if (cc==8) {
 				cityNameLong = 'Atlanta';
 			} else if (cc==9) {
-				cityNameLong = 'New York City';
-			} else if (cc==10) {
-				cityNameLong = 'Philadelphia';
-			} else if (cc==11) {
-				cityNameLong = 'Washington, DC';
-			} else {
 				cityNameLong = 'Miami';
+			} else if (cc==10) {
+				cityNameLong = 'Washington, DC';
+			} else if (cc==11) {
+				cityNameLong = 'Philadelphia';
+			} else {
+				cityNameLong = 'New York City';
 			}
 			var cityButton = document.createElement('a');
 			cityButton.href = '#';
 			cityButton.className = 'ub-city-button';
     		cityButton.innerHTML = cityNameLong;
-			cityButton.setAttribute("title", 'Click to center and zoom in '+cityNameLong);
+			cityButton.setAttribute("title", 'Click to center and zoom in on '+cityNameLong);
 			cityButton.setAttribute("id", cityName);
 			
 			var cityButtons = document.getElementById('ub-cities');
@@ -1270,7 +1269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
-				.text('2001 - baseline')
+				.text('2001: Baseline')
 				.attr("transform", "translate(20,68)");
 			var svgText = d3.select("svg")
 				.append("g")
@@ -1282,44 +1281,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('low prices.')
+				.text('low prices')
 				.attr("transform", "translate(20,102)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('12.6 million new mortgages.')
+				.text('12.6 million new mortgages')
 				.attr("transform", "translate(20,119)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('14% African American')
+				.text('14% black or Hispanic')
 				.attr("transform", "translate(20,136)");
-			var svgText = d3.select("svg")
-				.append("g")
-				.classed("ub-graph-caption", "true")
-				.append('text')
-				.text('or Hispanic.')
-				.attr("transform", "translate(20,153)");
 			// Graph second caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
-				.text('2006 - a boom')
+				.text('2006: A boom')
 				.attr("transform", "translate(314,170)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('Easy credit, high prices.')
+				.text('Easy credit, high prices')
 				.attr("transform", "translate(314,187)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('12.2 million new mortgages.')
+				.text('12.2 million new mortgages')
 				.attr("transform", "translate(314,204)");
 			var svgText = d3.select("svg")
 				.append("g")
@@ -1332,50 +1325,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
-				.text('2009 - a bust')
+				.text('2009: A bust')
 				.attr("transform", "translate(487,36)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('Tight credit, reduced prices.')
+				.text('Tight credit, reduced prices')
 				.attr("transform", "translate(487,53)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('8.3 million new mortgages.')
+				.text('8.3 million new mortgages')
 				.attr("transform", "translate(487,70)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('12% African American or Hispanic.')
+				.text('12% African American or Hispanic')
 				.attr("transform", "translate(487,87)");		
 			// Graph fourth caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
-				.text('2016 - recovering')
+				.text('2016: Recovering')
 				.attr("transform", "translate(829,157)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('Tight credit, high prices.')
+				.text('Tight credit, high prices')
 				.attr("transform", "translate(795,174)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('7.5 million new mortgages.')
+				.text('7.5 million new mortgages')
 				.attr("transform", "translate(777,191)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('16.9% African American or Hispanic.')
+				.text('16.9% African American or Hispanic')
 				.attr("transform", "translate(717,208)");		
 		
 			// Graph first number
@@ -1413,7 +1406,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
-				.text('April 2006')
+				.text('Apr. 2006')
 				.attr("transform", "translate(314,118)");
 			var svgText = d3.select("svg")
 				.append("g")
@@ -1435,7 +1428,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
-				.text('March 2009')
+				.text('Mar. 2009')
 				.attr("transform", "translate(487,120)");
 			var svgText = d3.select("svg")
 				.append("g")
