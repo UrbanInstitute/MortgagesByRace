@@ -11,18 +11,32 @@
      
 
 
-<!--social metas-->  
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@urbaninstitute">
 <meta name="twitter:creator" content="@urbaninstitute">
 <meta name="twitter:title" content="An interactive view of the housing boom and bust">
-<meta name="twitter:description" content="Our data tool shows 10 characteristics of preschool-age children by state and local area to inform child development and school readiness efforts. ">
-<meta name="twitter:image" content="http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg ">
-<meta property="og:title" content="10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action" />
-<meta property="og:description" content="Our data tool shows 10 characteristics of preschool-age children by state and local area to inform child development and school readiness efforts. " />
-<meta property="og:image" content="http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg " />
+<meta name="twitter:description" content="An interactive map of the US containing the most recent mortgage data reveals that minorities have been left behind in the housing recovery in many places.">
+<meta name="twitter:image" content="https://apps.urban.org/features/mortgages-by-race/img/social/thumb.png">
+<meta property="og:title" content="An interactive view of the housing boom and bust" />
+<meta property="og:description" content="An interactive map of the US containing the most recent mortgage data reveals that minorities have been left behind in the housing recovery in many places." />
+<meta property="og:image" content="https://apps.urban.org/features/mortgages-by-race/img/social/thumb.png" />
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:url" content="http://urbn.is/kidsdata">
+<meta property="og:url" content="http://urbn.is/MortgageByRace">
+
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "NewsArticle",
+	"headline": "An interactive view of the housing boom and bust",
+	"url": "http://apps.urban.org/features/mortgages-by-race/",
+	"thumbnailUrl": "https://apps.urban.org/features/mortgages-by-race/img/social/thumb.png",
+	"dateCreated": "2017-11-07T05:00:00.000Z",
+	"articleSection": "Interactive Feature",
+	"creator": ["Bing Bai","Bhargavi Ganesh"],
+	"keywords": ["Finance","Housing and Housing Finance","Neighborhoods, Cities, and Metros","Race and Ethnicity"]
+}
+</script>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet" />
@@ -37,19 +51,7 @@
 <!--project style sheet-->
 <link rel="stylesheet" href="css/style.css" type="text/css">
 
-        <script type="application/ld+json">
-{
-                "@context": "http://schema.org",
-                "@type": "NewsArticle",
-                "headline": "10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action",
-                "url": "http://apps.urban.org/features/characteristics-of-preschool-age-children",
-                "thumbnailUrl": "http://apps.urban.org/features/characteristics-of-preschool-age-children/img/social/thumb.jpg ",
-                "dateCreated": "2017-09-07T04:00:00.000Z",
-                "articleSection": "Interactive Feature",
-                "creator": ["Cary Lou","Devlin Hanson","Gina Adams","Audrey Singer"],
-                "keywords": ["Children","Education and Training","Families","Immigrants and Immigration","Poverty, Vulnerability, and the Safety Net","Race and Ethnicity"]
-}
-</script>
+
 
 
 
@@ -84,11 +86,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="shareThisW" id="shareBox">
 
                         <div class="addthis_toolbox addthis_default_style  "addthis:title="" addthis:url="">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//urbn.is/kidsdata" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://urbn.is/MortgageByRace" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
 
-                            <a href="http://twitter.com/intent/tweet?text=10%20important%20characteristics%20of%20preschool-age%20kids%20by%20state%20and%20local%20area%3A%20http%3A%2F%2Furbn.is%2Fkidsdata%20(via%20%40urbaninstitute)" target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
+                            <a href="https://twitter.com/home?status=New%20@urbaninstitute%20interactive:%20Breaking%20down%20mortgages%20by%20race%20http://urbn.is/MortgageByRace%20%23HMDA" target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
 
-                            <a href="mailto:%20?Subject=New data tool from the Urban Institute &amp;Body=Hi! I thought you'd be interested in this new resource from the Urban Institute: “10 Characteristics of Preschool-Age Children: A State and Local Data Tool to Inform Policy and Action” http://urbn.is/kidsdata" target="_blank" class="addthis_button_email at300b" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a>
+                            <a href="mailto:%20?Subject=New interactive feature by the Urban Institute&amp;Body=Hi! I thought you'd be interested in this new interactive feature from the Urban Institute: “A new view of the housing boom and bust” http://urbn.is/MortgageByRace" target="_blank" class="addthis_button_email at300b" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a>
                             <div class="atclear"></div>
                         </div>
 
@@ -231,21 +233,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <h4>Project credits</h4>
                     <div class="urbanstatement">
-                      <p>The Housing Finance Policy Center (HFPC) was launched with generous support at the leadership level from the Citi Foundation and John D. and Catherine T. MacArthur Foundation. Additional support was provided by The Ford Foundation and The Open Society Foundation.</p>
+                      <p>The Housing Finance Policy Center (HFPC), which produced this map, was launched with generous support at the leadership level from the Citi Foundation and John D. and Catherine T. MacArthur Foundation. Additional support was provided by The Ford Foundation and The Open Society Foundation.</p>
                       <p>Ongoing support for HFPC is also provided by the Housing Finance Innovation Forum, a group of organizations and individuals that support high-quality independent research that informs evidence-based policy development. Funds raised through the Forum provide flexible resources, allowing HFPC to anticipate and respond to emerging policy issues with timely analysis. This funding supports HFPC&rsquo;s research, outreach and engagement, and general operating activities.</p>
                       <p>This feature was funded by these combined sources. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission.</p>
                       <p>The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href="https://www.urban.org/support" target="_blank">here</a>.</p>
                     </div>
 
                     <h3 class="job">Research</h3>
-                  <p>Bing Bai and Bhargavi Ganesh </p>
+                  <p><a href="https://www.urban.org/author/bing-bai" target="new">Bing Bai</a> and <a href="https://www.urban.org/author/bhargavi-ganesh" target="new">Bhargavi Ganesh</a></p>
 <h3 class="job">Design and Development</h3>
-<p>5W Infographics, Ben Chartoff, and Jerry Ta</p>
+<p>5W Infographics, <a href="https://www.urban.org/author/benjamin-chartoff" target="new">Ben Chartoff</a>, <a href="https://www.urban.org/author/aaron-r-williams" target="new">Aaron Williams</a>, and <a href="https://www.urban.org/author/jerry-ta" target="new">Jerry Ta</a></p>
 <h3 class="job">Editorial</h3>
-                    <p>David Hinson</p>
+                    <p><a href="https://www.urban.org/author/david-hinson" target="new">David Hinson</a></p>
                     <h3 class="job">Writing</h3>
-                    <p>Sheryl Pardo</p>
-                    <div class="credits">Copyright &copy; November 2017. <a href="http://www.urban.org/" target = "_blank">Urban Institute</a>. <a href="https://github.com/UI-Research/preschool-data-tool" target="_blank">View this project on Github.</a></div>
+                    <p><a href="https://www.urban.org/author/sheryl-pardo" target="new">Sheryl Pardo</a></p>
+                    <div class="credits">Copyright &copy; November 2017. <a href="http://www.urban.org/" target = "_blank">Urban Institute</a>. <a href="https://github.com/UrbanInstitute/MortgagesByRace" target="_blank">View this project on Github.</a></div>
                 
          
     </div> 
