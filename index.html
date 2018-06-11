@@ -38,11 +38,11 @@
 }
 </script>
 
-<script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
+ <script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet" />
 
 <link href="http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/hmda-v4.css" />
+    <link rel="stylesheet" type="text/css" href="css/hmda-v5.css" />
     <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
       
 <!--for the header-->      
@@ -125,8 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div class="ub-intro-wrap">
 				<div class="ub-intro">
 					<h1>An interactive view of the housing boom and bust</h1>
-					
-					<p class="ub-intro-italic">This map was originally published in September 2013 and has been updated annually as new Home Mortgage Disclosure Act data become available. This 2017 update incorporates 2016 mortgage originations and includes information on purchase and refinance loans.</p>
+					<p class="ub-intro-italic">This map was originally published in September 2013 and has been updated annually as new Home Mortgage Disclosure Act data become available. This 2018 update incorporates 2017 mortgage originations and includes information on purchase and refinance loans.</p>
 					<p class="ub-top">Since 2008, the tight credit environment has <a href="https://www.urban.org/policy-centers/housing-finance-policy-center/projects/housing-credit-availability-index" target="_blank">constrained mortgage lending</a> and <a href="https://www.urban.org/urban-wire/increasing-access-mortgages-minorities" target="_blank">disproportionately affected black and Hispanic households</a>. As a result, these communities found it hard to take advantage of the low home prices and low interest rates that followed the housing market crash, missing an important opportunity to <a href="https://www.urban.org/research/publication/less-equal-racial-disparities-wealth-accumulation" target="_blank">build wealth through homeownership</a>. Credit remains tight today while home prices have reached their precrisis peak, further limiting affordable housing options for minority homebuyers.</p>
 				</div>
 			</div>
@@ -201,6 +200,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li><a class="ub-year" id="ub-2014" title="Click to see the 2014 data">2014</a></li>
 					<li><a class="ub-year" id="ub-2015" title="Click to see the 2015 data">2015</a></li>
 					<li><a class="ub-year" id="ub-2016" title="Click to see the 2016 data">2016</a></li>
+					<li><a class="ub-year" id="ub-2017" title="Click to see the 2017 data">2017</a></li>
 				</ul>
 			</div>
 			<div class="ub-footer-text">
@@ -252,11 +252,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div> 
     </footer>
     
-    <script type="text/javascript" src="js/jquery.2.1.4.min.js"></script>
-		<script type="text/javascript" src="js/d3.v3.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        
-    <script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/header.js"></script>  
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script>
 		mapboxgl.accessToken = 'pk.eyJ1IjoidXJiYW5pbnN0aXR1dGUiLCJhIjoiTEJUbmNDcyJ9.mbuZTy4hI_PWXw3C3UFbDQ';
 
 		var PurAsianOff = false;
@@ -286,9 +286,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		var toggleableLayerIds2014 = [ '2014purchaseasiannewgeojson', '2014refinanceasiannewgeojson', '2014purchasehisnewgeojson', '2014refinancehisnewgeojson', '2014purchaseaanewgeojson', '2014refinanceaanewgeojson', '2014purchasenhwnewgeojson', '2014refinancenhwnewgeojson' ];
 		var toggleableLayerIds2015 = [ '2015purchaseasiannew2geojson', '2015refinanceasiannew2geojson', '2015purchasehisnew2geojson', '2015refinancehisnew2geojson', '2015purchaseaanew2geojson', '2015refinanceaanew2geojson', '2015purchasenhwnew2geojson', '2015refinancenhwnew2geojson' ];
 		var toggleableLayerIds2016 = [ '2016purchaseasiannewgeojson', '2016refinanceasiannewgeojson', '2016purchasehisnewgeojson', '2016refinancehisnewgeojson', '2016purchaseaanewgeojson', '2016refinanceaanewgeojson', '2016purchasenhwnewgeojson', '2016refinancenhwnewgeojson' ];
+		var toggleableLayerIds2017 = [ '2017purchaseasiangeojson', '2017refinanceasiangeojson', '2017purchasehisgeojson', '2017refinancehisgeojson', '2017purchaseaageojson', '2017refinanceaageojson', '2017purchasenhwgeojson', '2017refinancenhwgeojson' ];
 		
-		var allToggles = [ toggleableLayerIds2001, toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016 ];
-		var allTogglesBlur = [ toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016, toggleableLayerIds2001 ];
+		var allToggles = [ toggleableLayerIds2001, toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016, toggleableLayerIds2017 ];
+		var allTogglesBlur = [ toggleableLayerIds2002, toggleableLayerIds2003, toggleableLayerIds2004, toggleableLayerIds2005, toggleableLayerIds2006, toggleableLayerIds2007, toggleableLayerIds2008, toggleableLayerIds2009, toggleableLayerIds2010, toggleableLayerIds2011, toggleableLayerIds2012, toggleableLayerIds2013, toggleableLayerIds2014, toggleableLayerIds2015, toggleableLayerIds2016, toggleableLayerIds2017, toggleableLayerIds2001 ];
   
 		var mapYearBox = document.getElementById('ub-map-year');
 		var mapEffect = document.getElementById('ub-map-year-blur');
@@ -591,7 +592,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				'cj9co512w5gar2stho27dw15r', // 2013 reduced
 				'cj9coha735fmq2rqcvdy2z7fr', // 2014 reduced
 				'cj9dz1s6y6nhp2so64kl7mmdc', // 2015 reduced
-				'cj9e00xdr7j9z2spfqopedm2a'  // 2016 reduced
+				'cj9e00xdr7j9z2spfqopedm2a', // 2016 reduced
+				'cjhqcrb015lbb2so2yhipsav8'  // 2017 reduced
 			]
 			var slidesBlur = [
 				'cj97f3n4a18pa2rnxf4jqspw3', // 2002 reduced
@@ -609,6 +611,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				'cj9coha735fmq2rqcvdy2z7fr', // 2014 reduced
 				'cj9dz1s6y6nhp2so64kl7mmdc', // 2015 reduced
 				'cj9e00xdr7j9z2spfqopedm2a', // 2016 reduced
+				'cjhqcrb015lbb2so2yhipsav8', // 2017 reduced
 				'cj95zz8wo03v22smcahc1rbbm' // 2001 reduced
 			]
 			var slidesLength = slides.length;
@@ -693,7 +696,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2001 = document.getElementById('ub-2001');
 			button2001.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(0);
 				}, 100);				
@@ -703,7 +705,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2002 = document.getElementById('ub-2002');
 			button2002.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(1);
 				}, 100);				
@@ -713,7 +714,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2003 = document.getElementById('ub-2003');
 			button2003.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(2);
 				}, 100);				
@@ -723,7 +723,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2004 = document.getElementById('ub-2004');
 			button2004.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(3);
 				}, 100);				
@@ -733,7 +732,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2005 = document.getElementById('ub-2005');
 			button2005.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(4);
 				}, 100);				
@@ -743,7 +741,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2006 = document.getElementById('ub-2006');
 			button2006.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(5);
 				}, 100);				
@@ -753,7 +750,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2007 = document.getElementById('ub-2007');
 			button2007.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(6);
 				}, 100);				
@@ -763,7 +759,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2008 = document.getElementById('ub-2008');
 			button2008.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(7);
 				}, 100);				
@@ -773,7 +768,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2009 = document.getElementById('ub-2009');
 			button2009.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(8);
 				}, 100);				
@@ -783,7 +777,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2010 = document.getElementById('ub-2010');
 			button2010.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(9);
 				}, 100);				
@@ -793,7 +786,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2011 = document.getElementById('ub-2011');
 			button2011.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(10);
 				}, 100);				
@@ -803,7 +795,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2012 = document.getElementById('ub-2012');
 			button2012.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(11);
 				}, 100);				
@@ -813,7 +804,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2013 = document.getElementById('ub-2013');
 			button2013.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(12);
 				}, 100);				
@@ -823,7 +813,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2014 = document.getElementById('ub-2014');
 			button2014.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(13);
 				}, 100);				
@@ -833,7 +822,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2015 = document.getElementById('ub-2015');
 			button2015.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(14);
 				}, 100);				
@@ -843,11 +831,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			var button2016 = document.getElementById('ub-2016');
 			button2016.onclick = function(){
 				pauseSlideshow();
-			//	goToSlideYear(previousSlide);
 				setTimeout(function(){
 					goToSlide(15);
 				}, 100);				
 				goToYear(15);
+			};
+			// 2017
+			var button2017 = document.getElementById('ub-2017');
+			button2017.onclick = function(){
+				pauseSlideshow();
+				setTimeout(function(){
+					goToSlide(16);
+				}, 100);				
+				goToYear(16);
 			};
 		};	// End of function mapSlideshow()
 		
@@ -856,13 +852,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    		// ********************* LAYER TOGGLE
 		
 		// Purchase asian
-    	var toggleableLayerPurAsian = [ '2001purchaseasiannewgeojson', '2002purchaseasiannewgeojson', '2003purchaseasiannewgeojson', '2004purchaseasiannewgeojson', '2005purchaseasiannewgeojson', '2006purchaseasiannewgeojson', '2007purchaseasiannewgeojson', '2008purchaseasiannewgeojson', '2009purchaseasiannewgeojson', '2010purchaseasiannewgeojson', '2011purchaseasiannewgeojson', '2012purchaseasiannewgeojson', '2013purchaseasiannewgeojson', '2014purchaseasiannewgeojson', '2015purchaseasiannew2geojson', '2016purchaseasiannewgeojson', ];		
+    	var toggleableLayerPurAsian = [ '2001purchaseasiannewgeojson', '2002purchaseasiannewgeojson', '2003purchaseasiannewgeojson', '2004purchaseasiannewgeojson', '2005purchaseasiannewgeojson', '2006purchaseasiannewgeojson', '2007purchaseasiannewgeojson', '2008purchaseasiannewgeojson', '2009purchaseasiannewgeojson', '2010purchaseasiannewgeojson', '2011purchaseasiannewgeojson', '2012purchaseasiannewgeojson', '2013purchaseasiannewgeojson', '2014purchaseasiannewgeojson', '2015purchaseasiannew2geojson', '2016purchaseasiannewgeojson', '2017purchaseasiangeojson', ];		
 		var linkPurAsian = document.getElementById('ub-purchase-asian-link');		
 		linkPurAsian.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurAsian[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -873,7 +869,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurAsian[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -886,13 +882,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			}
 		};
 		// Refinance asian
-    	var toggleableLayerRefiAsian = [ '2001refinanceasiannewgeojson', '2002refinanceasiannewgeojson', '2003refinanceasiannewgeojson', '2004refinanceasiannewgeojson', '2005refinanceasiannewgeojson', '2006refinanceasiannewgeojson', '2007refinanceasiannewgeojson', '2008refinanceasiannewgeojson', '2009refinanceasiannewgeojson', '2010refinanceasiannewgeojson', '2011refinanceasiannewgeojson', '2012refinanceasiannewgeojson', '2013refinanceasiannewgeojson', '2014refinanceasiannewgeojson', '2015refinanceasiannew2geojson', '2016refinanceasiannewgeojson', ];		
+    	var toggleableLayerRefiAsian = [ '2001refinanceasiannewgeojson', '2002refinanceasiannewgeojson', '2003refinanceasiannewgeojson', '2004refinanceasiannewgeojson', '2005refinanceasiannewgeojson', '2006refinanceasiannewgeojson', '2007refinanceasiannewgeojson', '2008refinanceasiannewgeojson', '2009refinanceasiannewgeojson', '2010refinanceasiannewgeojson', '2011refinanceasiannewgeojson', '2012refinanceasiannewgeojson', '2013refinanceasiannewgeojson', '2014refinanceasiannewgeojson', '2015refinanceasiannew2geojson', '2016refinanceasiannewgeojson', '2017refinanceasiangeojson', ];		
 		var linkRefiAsian = document.getElementById('ub-refinance-asian-link');
 		linkRefiAsian.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiAsian[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -903,7 +899,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiAsian[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -917,13 +913,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		};
 		
 		// Purchase hispanic
-    	var toggleableLayerPurHispanic = [ '2001purchasehisnewgeojson', '2002purchasehisnewgeojson', '2003purchasehisnewgeojson', '2004purchasehisnewgeojson', '2005purchasehisnewgeojson', '2006purchasehisnewgeojson', '2007purchasehisnewgeojson', '2008purchasehisnewgeojson', '2009purchasehisnewgeojson', '2010purchasehisnewgeojson', '2011purchasehisnewgeojson', '2012purchasehisnewgeojson', '2013purchasehisnewgeojson', '2014purchasehisnewgeojson', '2015purchasehisnew2geojson', '2016purchasehisnewgeojson', ];		
+    	var toggleableLayerPurHispanic = [ '2001purchasehisnewgeojson', '2002purchasehisnewgeojson', '2003purchasehisnewgeojson', '2004purchasehisnewgeojson', '2005purchasehisnewgeojson', '2006purchasehisnewgeojson', '2007purchasehisnewgeojson', '2008purchasehisnewgeojson', '2009purchasehisnewgeojson', '2010purchasehisnewgeojson', '2011purchasehisnewgeojson', '2012purchasehisnewgeojson', '2013purchasehisnewgeojson', '2014purchasehisnewgeojson', '2015purchasehisnew2geojson', '2016purchasehisnewgeojson', '2017purchasehisgeojson', ];		
 		var linkPurHispanic = document.getElementById('ub-purchase-hispanic-link');		
 		linkPurHispanic.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurHispanic[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -934,7 +930,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurHispanic[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -947,13 +943,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			}
 		};
 		// Refinance hispanic
-    	var toggleableLayerRefiHispanic = [ '2001refinancehisnewgeojson', '2002refinancehisnewgeojson', '2003refinancehisnewgeojson', '2004refinancehisnewgeojson', '2005refinancehisnewgeojson', '2006refinancehisnewgeojson', '2007refinancehisnewgeojson', '2008refinancehisnewgeojson', '2009refinancehisnewgeojson', '2010refinancehisnewgeojson', '2011refinancehisnewgeojson', '2012refinancehisnewgeojson', '2013refinancehisnewgeojson', '2014refinancehisnewgeojson', '2015refinancehisnew2geojson', '2016refinancehisnewgeojson', ];		
+    	var toggleableLayerRefiHispanic = [ '2001refinancehisnewgeojson', '2002refinancehisnewgeojson', '2003refinancehisnewgeojson', '2004refinancehisnewgeojson', '2005refinancehisnewgeojson', '2006refinancehisnewgeojson', '2007refinancehisnewgeojson', '2008refinancehisnewgeojson', '2009refinancehisnewgeojson', '2010refinancehisnewgeojson', '2011refinancehisnewgeojson', '2012refinancehisnewgeojson', '2013refinancehisnewgeojson', '2014refinancehisnewgeojson', '2015refinancehisnew2geojson', '2016refinancehisnewgeojson', '2017refinancehisgeojson', ];		
 		var linkRefiHispanic = document.getElementById('ub-refinance-hispanic-link');
 		linkRefiHispanic.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiHispanic[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -964,7 +960,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiHispanic[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -978,13 +974,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		};
 		
 		// Purchase black
-    	var toggleableLayerPurBlack = [ '2001purchaseaanewgeojson', '2002purchaseaanewgeojson', '2003purchaseaanewgeojson', '2004purchaseaanewgeojson', '2005purchaseaanewgeojson', '2006purchaseaanewgeojson', '2007purchaseaanewgeojson', '2008purchaseaanewgeojson', '2009purchaseaanewgeojson', '2010purchaseaanewgeojson', '2011purchaseaanewgeojson', '2012purchaseaanewgeojson', '2013purchaseaanewgeojson', '2014purchaseaanewgeojson', '2015purchaseaanew2geojson', '2016purchaseaanewgeojson', ];		
+    	var toggleableLayerPurBlack = [ '2001purchaseaanewgeojson', '2002purchaseaanewgeojson', '2003purchaseaanewgeojson', '2004purchaseaanewgeojson', '2005purchaseaanewgeojson', '2006purchaseaanewgeojson', '2007purchaseaanewgeojson', '2008purchaseaanewgeojson', '2009purchaseaanewgeojson', '2010purchaseaanewgeojson', '2011purchaseaanewgeojson', '2012purchaseaanewgeojson', '2013purchaseaanewgeojson', '2014purchaseaanewgeojson', '2015purchaseaanew2geojson', '2016purchaseaanewgeojson', '2017purchaseaageojson', ];		
 		var linkPurBlack = document.getElementById('ub-purchase-black-link');		
 		linkPurBlack.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurBlack[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -995,7 +991,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();				
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurBlack[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -1008,13 +1004,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			}
 		};
 		// Refinance black
-    	var toggleableLayerRefiBlack = [ '2001refinanceaanewgeojson', '2002refinanceaanewgeojson', '2003refinanceaanewgeojson', '2004refinanceaanewgeojson', '2005refinanceaanewgeojson', '2006refinanceaanewgeojson', '2007refinanceaanewgeojson', '2008refinanceaanewgeojson', '2009refinanceaanewgeojson', '2010refinanceaanewgeojson', '2011refinanceaanewgeojson', '2012refinanceaanewgeojson', '2013refinanceaanewgeojson', '2014refinanceaanewgeojson', '2015refinanceaanew2geojson', '2016refinanceaanewgeojson', ];
+    	var toggleableLayerRefiBlack = [ '2001refinanceaanewgeojson', '2002refinanceaanewgeojson', '2003refinanceaanewgeojson', '2004refinanceaanewgeojson', '2005refinanceaanewgeojson', '2006refinanceaanewgeojson', '2007refinanceaanewgeojson', '2008refinanceaanewgeojson', '2009refinanceaanewgeojson', '2010refinanceaanewgeojson', '2011refinanceaanewgeojson', '2012refinanceaanewgeojson', '2013refinanceaanewgeojson', '2014refinanceaanewgeojson', '2015refinanceaanew2geojson', '2016refinanceaanewgeojson', '2017refinanceaageojson', ];
 		var linkRefiBlack = document.getElementById('ub-refinance-black-link');
 		linkRefiBlack.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiBlack[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -1025,7 +1021,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiBlack[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -1039,13 +1035,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		};
 		
 		// Purchase white
-    	var toggleableLayerPurWhite = [ '2001purchasenhwnewgeojson', '2002purchasenhwnewgeojson', '2003purchasenhwnewgeojson', '2004purchasenhwnewgeojson', '2005purchasenhwnewgeojson', '2006purchasenhwnewgeojson', '2007purchasenhwnewgeojson', '2008purchasenhwnewgeojson', '2009purchasenhwnewgeojson', '2010purchasenhwnewgeojson', '2011purchasenhwnewgeojson', '2012purchasenhwnewgeojson', '2013purchasenhwnewgeojson', '2014purchasenhwnewgeojson', '2015purchasenhwnew2geojson', '2016purchasenhwnewgeojson', ];		
+    	var toggleableLayerPurWhite = [ '2001purchasenhwnewgeojson', '2002purchasenhwnewgeojson', '2003purchasenhwnewgeojson', '2004purchasenhwnewgeojson', '2005purchasenhwnewgeojson', '2006purchasenhwnewgeojson', '2007purchasenhwnewgeojson', '2008purchasenhwnewgeojson', '2009purchasenhwnewgeojson', '2010purchasenhwnewgeojson', '2011purchasenhwnewgeojson', '2012purchasenhwnewgeojson', '2013purchasenhwnewgeojson', '2014purchasenhwnewgeojson', '2015purchasenhwnew2geojson', '2016purchasenhwnewgeojson', '2017purchasenhwgeojson', ];		
 		var linkPurWhite = document.getElementById('ub-purchase-white-link');		
 		linkPurWhite.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurWhite[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -1056,7 +1052,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerPurWhite[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -1069,13 +1065,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			}
 		};
 		// Refinance white
-    	var toggleableLayerRefiWhite = [ '2001refinancenhwnew15geojson', '2002refinancenhwnewgeojson', '2003refinancenhwnew5geojson', '2004refinancenhwnew2geojson', '2005refinancenhwnewgeojson', '2006refinancenhwnewgeojson', '2007refinancenhwnewgeojson', '2008refinancenhwnewgeojson', '2009refinancenhwnewgeojson', '2010refinancenhwnewgeojson', '2011refinancenhwnewgeojson', '2012refinancenhwnewgeojson', '2013refinancenhwnewgeojson', '2014refinancenhwnewgeojson', '2015refinancenhwnew2geojson', '2016refinancenhwnewgeojson', ];		
+    	var toggleableLayerRefiWhite = [ '2001refinancenhwnew15geojson', '2002refinancenhwnewgeojson', '2003refinancenhwnew5geojson', '2004refinancenhwnew2geojson', '2005refinancenhwnewgeojson', '2006refinancenhwnewgeojson', '2007refinancenhwnewgeojson', '2008refinancenhwnewgeojson', '2009refinancenhwnewgeojson', '2010refinancenhwnewgeojson', '2011refinancenhwnewgeojson', '2012refinancenhwnewgeojson', '2013refinancenhwnewgeojson', '2014refinancenhwnewgeojson', '2015refinancenhwnew2geojson', '2016refinancenhwnewgeojson', '2017refinancenhwgeojson', ];		
 		var linkRefiWhite = document.getElementById('ub-refinance-white-link');
 		linkRefiWhite.onclick = function(te) {
 			te.preventDefault();
         	te.stopPropagation();
 			if (this.className=='ub-button active') {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiWhite[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'none');
@@ -1086,7 +1082,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				allButtons = [ PurAsianOff, RefiAsianOff, PurHispanicOff, RefiHispanicOff, PurBlackOff, RefiBlackOff, PurWhiteOff, RefiWhiteOff ];
 				toggleAllIf();
 			} else {
-				for (var r = 0; r < 16; r++) {
+				for (var r = 0; r < 17; r++) {
 					if (r===currentYear) {
 						var layerToggle = toggleableLayerRefiWhite[r];
 						mapYear.setLayoutProperty(layerToggle, 'visibility', 'visible');
@@ -1178,21 +1174,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		};	// End of function loadToggleBlur()	
     </script>
 
-	<!-- LINE CHART STARTS HERE -->
-	<script type="text/javascript" src="js/d3.v3.min.js"></script> 
+<script type="text/javascript" src="js/d3.v3.min.js"></script> 
 	<script>
 		var lineChart;
 		// Set the dimensions of the canvas / graph
 		var	margin = {top: 32, right: 0, bottom: 32, left: 0},
 		width = 960 + margin.left + margin.right,
-		height = 252 - margin.bottom,
-		heightBox = 252;
+		height = 265 - margin.bottom,
+		heightBox = 265;
  
 		// Parse the date / time
 		var	parseDate = d3.time.format("%d-%b-%y").parse;
 		// Set the ranges
 		var	x = d3.time.scale().range([0, width-12]);
-		var	y = d3.scale.linear().range([height, 0]);
+		var	y = d3.scale.linear().range([height, 13]);
  
 		// Define the axes
 		var	xAxis = d3.svg.axis().scale(x)
@@ -1217,7 +1212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			.classed("ub-line-container","true");
  
 		// Get the data
-		d3.csv("data/hmdadata.csv", function(error, data) {
+		d3.csv("data/hmdadata-2018.csv", function(error, data) {
 			data.forEach(function(d) {
 				d.date = parseDate(d.date);
 				d.prices = d.prices;
@@ -1252,125 +1247,125 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.classed("ub-graph-name", "true")
 				.append('text')
 				.text('Home')
-				.attr("transform", "translate(213,154)");
+				.attr("transform", "translate(200,177)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-name", "true")
 				.append('text')
 				.text('Price')
-				.attr("transform", "translate(213,176)");
+				.attr("transform", "translate(200,199)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-name", "true")
 				.append('text')
 				.text('Index')
-				.attr("transform", "translate(213,198)");
+				.attr("transform", "translate(200,221)");
 			// Graph first caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
 				.text('2001: Baseline')
-				.attr("transform", "translate(20,68)");
+				.attr("transform", "translate(20,81)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Reasonable credit standards,')
-				.attr("transform", "translate(20,85)");
+				.attr("transform", "translate(20,98)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('low prices')
-				.attr("transform", "translate(20,102)");
+				.attr("transform", "translate(20,115)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('12.6 million new mortgages')
-				.attr("transform", "translate(20,119)");
+				.attr("transform", "translate(20,132)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('14% black or Hispanic')
-				.attr("transform", "translate(20,136)");
+				.attr("transform", "translate(20,149)");
 			// Graph second caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
 				.text('2006: A boom')
-				.attr("transform", "translate(314,170)");
+				.attr("transform", "translate(296,183)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Easy credit, high prices')
-				.attr("transform", "translate(314,187)");
+				.attr("transform", "translate(296,200)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('12.2 million new mortgages')
-				.attr("transform", "translate(314,204)");
+				.attr("transform", "translate(296,217)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('25% African American or Hispanic.')
-				.attr("transform", "translate(314,221)");
+				.text('25% African American or Hispanic')
+				.attr("transform", "translate(296,234)");
 			// Graph third caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
 				.text('2009: A bust')
-				.attr("transform", "translate(487,36)");
+				.attr("transform", "translate(460,49)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Tight credit, reduced prices')
-				.attr("transform", "translate(487,53)");
+				.attr("transform", "translate(460,66)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('8.3 million new mortgages')
-				.attr("transform", "translate(487,70)");
+				.attr("transform", "translate(460,83)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('12% African American or Hispanic')
-				.attr("transform", "translate(487,87)");		
+				.attr("transform", "translate(460,100)");		
 			// Graph fourth caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
-				.text('2016: Recovering')
-				.attr("transform", "translate(829,157)");
+				.text('2017: Recovering')
+				.attr("transform", "translate(829,170)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Tight credit, high prices')
-				.attr("transform", "translate(795,174)");
+				.attr("transform", "translate(795,187)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('7.5 million new mortgages')
-				.attr("transform", "translate(777,191)");
+				.text('6.5 million new mortgages')
+				.attr("transform", "translate(777,204)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
-				.text('16.9% African American or Hispanic')
-				.attr("transform", "translate(717,208)");		
+				.text('18.4% African American or Hispanic')
+				.attr("transform", "translate(717,221)");		
 		
 			// Graph first number
 			var svgText = d3.select("svg")
@@ -1378,107 +1373,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.classed("ub-graph-month", "true")
 				.append('text')
 				.text('Jan. 2001')
-				.attr("transform", "translate(20,180)");
+				.attr("transform", "translate(20,193)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
 				.text('109.8')
-				.attr("transform", "translate(20,197)");
+				.attr("transform", "translate(20,210)");
 			// Graph first number line
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
 				.attr("x1", "6")
-				.attr("y1", "175")
+				.attr("y1", "188")
 				.attr("x2", "6")
-				.attr("y2", "223");
+				.attr("y2", "236");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
 				.attr("x1", "6")
-				.attr("y1", "175")
+				.attr("y1", "188")
 				.attr("x2", "18")
-				.attr("y2", "175");
+				.attr("y2", "188");
 			// Graph second number
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
 				.text('Apr. 2006')
-				.attr("transform", "translate(314,118)");
+				.attr("transform", "translate(296,131)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
 				.text('193.7')
-				.attr("transform", "translate(314,135)");
+				.attr("transform", "translate(296,148)");
 			// Graph second number line
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
-				.attr("x1", "318")
-				.attr("y1", "38")
-				.attr("x2", "318")
-				.attr("y2", "103");
+				.attr("x1", "300")
+				.attr("y1", "54")
+				.attr("x2", "300")
+				.attr("y2", "116");
 			// Graph third number
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
 				.text('Mar. 2009')
-				.attr("transform", "translate(487,120)");
+				.attr("transform", "translate(460,133)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
 				.text('135.4')
-				.attr("transform", "translate(487,137)");
+				.attr("transform", "translate(460,150)");
 			// Graph third number line
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
-				.attr("x1", "492")
-				.attr("y1", "142")
-				.attr("x2", "492")
-				.attr("y2", "164");
+				.attr("x1", "464")
+				.attr("y1", "155")
+				.attr("x2", "464")
+				.attr("y2", "177");
 			// Graph fourth number
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
-				.text('Dec. 2016')
-				.attr("transform", "translate(872,110)");
+				.text('Dec. 2017')
+				.attr("transform", "translate(872,123)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
-				.text('183.3')
-				.attr("transform", "translate(899,127)");
+				.text('194.9')
+				.attr("transform", "translate(899,140)");
 			// Graph fourth number lines
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
 				.attr("x1", "954")
-				.attr("y1", "63")
+				.attr("y1", "51")
 				.attr("x2", "954")
-				.attr("y2", "105");
+				.attr("y2", "118");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
 				.attr("x1", "944")
-				.attr("y1", "105")
+				.attr("y1", "118")
 				.attr("x2", "954")
-				.attr("y2", "105");
+				.attr("y2", "118");
 
 			// Draw four points over the line
-			d3.csv("data/hmdadatapoints.csv", function(error, datapoints) {
+			d3.csv("data/hmdadatapoints-2018.csv", function(error, datapoints) {
 				datapoints.forEach(function(d) {
 					d.date = parseDate(d.date);
 					d.prices = d.prices;
@@ -1499,6 +1494,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					.attr('r',6);
 			});
 	</script>
+
+  
 		
 
 <script>
@@ -1535,7 +1532,7 @@ ga('send', 'pageview');
 
       
      
-          <script src="js/header.js"></script>    
+  
         
   </body>
 </html>
