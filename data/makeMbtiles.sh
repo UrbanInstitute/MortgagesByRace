@@ -3,7 +3,7 @@
 #!/bin/bash
 
 # change this as needed
-year=2018
+year=2019
 
 # make African-American purchase mbtiles
 tippecanoe -o us-purchase$year-aa.mbtiles -z11 -Z3 -r1.5 -g3 -x raceethnic us-purchase$year-aa.geojson

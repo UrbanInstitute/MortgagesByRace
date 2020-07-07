@@ -4,7 +4,7 @@
 
 library(tidyverse)
 
-year <- 2018  # change year as needed to reflect most recent data
+year <- 2019  # change year as needed to reflect most recent data
 
 purchase_raw <- read_csv(str_glue("source/us-purchase{year}.csv"))
 refi_raw <- read_csv(str_glue("source/us-refi{year}.csv"))
