@@ -438,6 +438,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         		zoom: 10.6,
         		pitch: 0
 			},
+            'minneapolis': {
+                center: [-93.235857, 44.962461],
+                zoom: 10.6,
+                pitch: 0
+            },
 		};
 
 		var cityNames = Object.keys(cities);
@@ -469,9 +474,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				cityNameLong = 'Philadelphia';
 			} else if (cc==11) {
 				cityNameLong = 'Washington, DC';
-			} else {
+			} else if (cc==12) {
 				cityNameLong = 'Miami';
-			}
+			} else {
+                cityNameLong = 'Minneapolis';
+            }
 			var cityButton = document.createElement('a');
 			cityButton.href = '#';
 			cityButton.className = 'ub-city-button';
@@ -522,7 +529,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		document.getElementById('seattle').addEventListener('click', function () {
 			mapBase.flyTo(cities['seattle']);
 		});
-
+        document.getElementById('minneapolis').addEventListener('click', function () {
+            mapBase.flyTo(cities['minneapolis']);
+        });
 
 		// ********************* COORDINATION OF MOVEMENT AND SCALE BETWEEN MAPS
 		var disable = false;

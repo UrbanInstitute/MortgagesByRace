@@ -100,7 +100,7 @@ body {
 }
 #ub-map-container #ub-cities-wrap #ub-cities {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1040px;
 }
 #ub-map-container #ub-cities-wrap #ub-cities .ub-cities-icon {
 	background-image: url(bg-icons-v2.png);
@@ -307,7 +307,7 @@ body {
 	height: 28px;
 	line-height: 28px;
 	margin: 0 0 2px 2px;
-	padding: 0px 2px;      
+	padding: 0px 2px;
 	text-align: center;
 	text-decoration: none;
 	width: 32px;
@@ -323,7 +323,7 @@ body {
 	color: #fff;
 }
 #ub-map-container .ub-legend-right #ub-menu a#ub-purchase-black-link {
-	background-color: #fccb41;	
+	background-color: #fccb41;
 	border: 1px solid #fccb41;
 	color: #fff;
 }
@@ -580,17 +580,17 @@ body {
 .ub-line-container {
 	padding: 0 0 30px 0;
 }
-path { 
+path {
   stroke: #1696d2;
   stroke-width: 3;
   fill: none;
 }
-.ub-points circle { 
+.ub-points circle {
   stroke: #000;
   stroke-width: 1;
   fill: #FFF;
 }
- 
+
 .axis path,
 .axis line {
 	fill: none;
@@ -687,7 +687,7 @@ path {
 		left: calc((100% - 820px) / 2);
 	}
 }
-			
+
 @media screen and (max-width:840px) {
 	#ub-map-container,
 	#ub-map-container-wrap,
@@ -723,7 +723,7 @@ path {
 		font-size: 13px;
 	}
 }
-			
+
 @media screen and (max-width:720px) {
 	#ub-map-container,
 	#ub-map-container-wrap,
@@ -873,7 +873,7 @@ path {
 		line-height: 24px;
 	}
 	.ub-map-gradient {
-		background-size: 1px 76px;		
+		background-size: 1px 76px;
 		height: 76px;
 	}
 	.mapboxgl-ctrl-top-right {
@@ -884,7 +884,7 @@ path {
 		top: initial;
 		z-index: 3000;
 	}
-	
+
 	.ub-graphic-container {
 		height: auto;
 	}
