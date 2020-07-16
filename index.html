@@ -1248,7 +1248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			.classed("ub-line-container","true");
 
 		// Get the data
-		d3.csv("data/hmdadata-2018.csv", function(error, data) {
+		d3.csv("data/hmdadata-2019.csv", function(error, data) {
 			data.forEach(function(d) {
 				d.date = parseDate(d.date);
 				d.prices = d.prices;
@@ -1334,50 +1334,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
 				.text('2006: A boom')
-				.attr("transform", "translate(280,183)");
+				.attr("transform", "translate(273,183)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Easy credit, high prices')
-				.attr("transform", "translate(280,200)");
+				.attr("transform", "translate(273,200)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('12.2 million new mortgages')
-				.attr("transform", "translate(280,217)");
+				.attr("transform", "translate(273,217)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('25% black or Hispanic')
-				.attr("transform", "translate(280,234)");
+				.attr("transform", "translate(273,234)");
 			// Graph third caption
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption-title", "true")
 				.append('text')
 				.text('2009: A bust')
-				.attr("transform", "translate(440,39)");
+				.attr("transform", "translate(418,39)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('Tight credit, reduced prices')
-				.attr("transform", "translate(440,56)");
+				.attr("transform", "translate(418,56)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('8.3 million new mortgages')
-				.attr("transform", "translate(440,73)");
+				.attr("transform", "translate(418,73)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-caption", "true")
 				.append('text')
 				.text('12% black or Hispanic')
-				.attr("transform", "translate(440,90)");
+				.attr("transform", "translate(418,90)");
 			// Graph fourth caption
 			var svgText = d3.select("svg")
 				.append("g")
@@ -1440,56 +1440,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.classed("ub-graph-month", "true")
 				.append('text')
 				.text('Jun. 2006')
-				.attr("transform", "translate(288,131)");
+				.attr("transform", "translate(272,141)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
 				.text('175.5')
-				.attr("transform", "translate(288,148)");
+				.attr("transform", "translate(272,158)");
 			// Graph second number line
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
-				.attr("x1", "292")
-				.attr("y1", "100")
-				.attr("x2", "292")
-				.attr("y2", "116");
+				.attr("x1", "277")
+				.attr("y1", "110")
+				.attr("x2", "277")
+				.attr("y2", "126");
 			// Graph third number
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
 				.text('Apr. 2009')
-				.attr("transform", "translate(436,118)");
+				.attr("transform", "translate(416,125)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
 				.text('144.1')
-				.attr("transform", "translate(436,135)");
+				.attr("transform", "translate(416,142)");
 			// Graph third number line
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-line", "true")
 				.append('line')
-				.attr("x1", "442")
-				.attr("y1", "140")
-				.attr("x2", "442")
-				.attr("y2", "154");
+				.attr("x1", "419")
+				.attr("y1", "148")
+				.attr("x2", "419")
+				.attr("y2", "162");
 			// Graph fourth number
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month", "true")
 				.append('text')
-				.text('Dec. 2018')
+				.text('Dec. 2019')
 				.attr("transform", "translate(872,123)");
 			var svgText = d3.select("svg")
 				.append("g")
 				.classed("ub-graph-month-number", "true")
 				.append('text')
-				.text('193.1')
+				.text('201.6')
 				.attr("transform", "translate(899,140)");
 			// Graph fourth number lines
 			var svgText = d3.select("svg")
@@ -1510,7 +1510,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				.attr("y2", "118");
 
 			// Draw four points over the line
-			d3.csv("data/hmdadatapoints-2018.csv", function(error, datapoints) {
+			d3.csv("data/hmdadatapoints-2019.csv", function(error, datapoints) {
 				datapoints.forEach(function(d) {
 					d.date = parseDate(d.date);
 					d.prices = d.prices;
